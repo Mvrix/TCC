@@ -1,0 +1,21 @@
+[Start of the Program]
+[End of the Program]
+[Start of the Program]
+15:05:53.497 [9] INFO  CadCliente - Abriu agora
+[End of the Program]
+[Start of the Program]
+17:04:15.479 [9] INFO  Databaselist - INSERT INTO  (id, nome, endereco, bairro, cep, telefone, email, rg, cpf, cidade, datanasc, tipo, observacao) VALUES ('Mariu','Na escola','Lab 1','1','15 321762225','vaasd@hotmail.com','51d56sadsad','dsadsasadadas','Sorocaba','sábado, 12 de agosto de 2017','0','joaijdsaijdoisajddsaodisaosa')
+17:04:15.825 [9] ERROR Databaselist - Sintaxe incorreta próxima a '('.
+[Start of the Program]
+17:05:24.118 [9] INFO  Databaselist - INSERT INTO  (nome, endereco, bairro, cep, telefone, email, rg, cpf, cidade, datanasc, tipo, observacao) VALUES ('Mariu','sudhausa','dsuahdusa','hfduahdusa','dusahdusahdsa','saudsadusa','daoshdsaihdoiash','hdusahdushuh','uhsduah','sábado, 11 de fevereiro de 2017','0','asdsasadsad')
+17:05:24.151 [9] ERROR Databaselist - Sintaxe incorreta próxima a '('.
+[Start of the Program]
+17:07:36.384 [10] INFO  Databaselist - INSERT INTO tcc_pessoas (nome, endereco, bairro, cep, telefone, email, rg, cpf, cidade, datanasc, tipo, observacao) VALUES ('sdadsa','dsadsad','sdadsa','dsadsa','sdfafsd','sdadsasa','dsadsad','sdadsasadsa','sdadsa','domingo, 12 de fevereiro de 2017','0','dsdadsadsadsadsadsa')
+17:07:36.418 [10] ERROR Databaselist - Falha ao converter data e/ou hora da cadeia de caracteres.
+[Start of the Program]
+17:08:19.682 [9] INFO  Databaselist - INSERT INTO tcc_pessoas (nome, endereco, bairro, cep, telefone, email, rg, cpf, cidade, datanasc, tipo, observacao) VALUES ('sdad','dsadsad','sa','gdsagdusayg','dsaygdsauygd','dsaygdauysg','dsaygdysag','dsaygdsay','dusagdusag','11/07/2000','0','dsadsadsadsadsadsa')
+17:08:19.730 [9] ERROR Databaselist - Dados de cadeia ou binários seriam truncados.
+A instrução foi finalizada.
+17:09:29.304 [9] INFO  Databaselist - INSERT INTO tcc_pessoas (nome, endereco, bairro, cep, telefone, email, rg, cpf, cidade, datanasc, tipo, observacao) VALUES ('sdad','dsadsad','sa','gdsa','dsaygd','dsayg','dsayg','dsayg','dusag','11/07/2000','0','dsadsadsadsadsadsa')
+[Start of the Program]
+17:10:44.276 [9] INFO  Databaselist - INSERT INTO tcc_pessoas (nome, endereco, bairro, cep, telefone, email, rg, cpf, cidade, datanasc, tipo, observacao) VALUES ('sads','dsadasasd','adasda','dsadsad','dsadsas','addsasdadsa','dsdsad','sadasds','sdsadsa','02/08/2017','1','sadsasadsadsa')

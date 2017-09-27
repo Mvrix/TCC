@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="TCC_Hidracom.MenuItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TCC_Hidracom"
+             mc:Ignorable="d">
+
+    <Grid>
+        <WrapPanel Orientation="Vertical">
+            <Rectangle Width="25" Height="25">
+                <Rectangle.Fill>
+                    <VisualBrush x:Name="VisualIcon"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBlock x:Name="LabelText" FontSize="14" TextAlignment="Center"/>
+        </WrapPanel>
+    </Grid>
+</UserControl>

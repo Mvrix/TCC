@@ -1,0 +1,67 @@
+﻿<Window x:Class="TCC_Hidracom.HistoricoOs"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TCC_Hidracom"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             TextElement.Foreground="{StaticResource MaterialDesignBody}"
+             Background="{StaticResource MaterialDesignPaper}"
+             Width="350" Height="350">
+
+    <materialDesign:DialogHost Identifier="ContentDialog" IsOpen="{Binding IsOpen}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="340"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <materialDesign:ColorZone Grid.ColumnSpan="2" 
+                                  Mode="PrimaryDark" 
+                                  Margin="16"
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth3"
+                                  Padding="5">
+
+                <TextBlock Text="{Binding Title}"/>
+            </materialDesign:ColorZone>
+
+            <StackPanel Grid.Column="0" Grid.Row="1" DataContext="{Binding Pessoa}">
+
+                <DockPanel Margin="10">
+                    <TextBlock x:Name="textBlock" Text="Cliente:"/>
+                    <TextBox Margin="29 0 0 0" Text="{Binding Nome}"/>
+                </DockPanel>
+
+                <DockPanel Margin="10" HorizontalAlignment="Left">
+                    <TextBlock Text="De:"/>
+                    <DatePicker Margin="5 0 0 0" materialDesign:HintAssist.Hint="XX/XX/XXXX" SelectedDate="{Binding DataNasc}"/>
+                </DockPanel>
+
+                <DockPanel Margin="10" HorizontalAlignment="Left">
+                    <TextBlock Text="Até:"/>
+                    <DatePicker Margin="5 0 0 0" materialDesign:HintAssist.Hint="XX/XX/XXXX" SelectedDate="{Binding DataNasc}"/>
+                </DockPanel>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5" Grid.Row="2">
+
+                <Button Content="Gerar"
+                    Width="150"
+                    Command="{Binding CadastrarCommand}" Margin="0 0 15 0"/>
+
+                <Button Content="Voltar"
+                    Width="150"
+                    Command="{Binding BackCommand}"/>
+
+            </StackPanel>
+        </Grid>
+    </materialDesign:DialogHost>
+</Window>

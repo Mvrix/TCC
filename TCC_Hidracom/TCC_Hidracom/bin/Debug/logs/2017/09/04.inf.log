@@ -1,0 +1,4 @@
+[Start of the Program]
+08:51:46.501 [9] INFO  Databaselist - INSERT INTO tcc_observacao_servicos (nome_servico, observacao) VALUES ('Bater no isaque','Ele é agressivo')
+08:51:46.653 [9] ERROR Databaselist - Nome de coluna 'nome_servico' inválido.
+Nome de coluna 'observacao' inválido.

@@ -1,0 +1,10 @@
+C:\Users\ManutencaoEtec\Desktop\WPF_TCC_UNIDENTE\WPF_TCC_UNIDENTE\obj\Debug\Views\Pallete\Palette.baml
+C:\Users\ManutencaoEtec\Desktop\WPF_TCC_UNIDENTE\WPF_TCC_UNIDENTE\obj\Debug\MainWindow.g.cs
+C:\Users\ManutencaoEtec\Desktop\WPF_TCC_UNIDENTE\WPF_TCC_UNIDENTE\obj\Debug\Views\None.g.cs
+C:\Users\ManutencaoEtec\Desktop\WPF_TCC_UNIDENTE\WPF_TCC_UNIDENTE\obj\Debug\Views\Pallete\Palette.g.cs
+C:\Users\ManutencaoEtec\Desktop\WPF_TCC_UNIDENTE\WPF_TCC_UNIDENTE\obj\Debug\Views\Pallete\UserControlPaletteSelector.g.cs
+C:\Users\ManutencaoEtec\Desktop\WPF_TCC_UNIDENTE\WPF_TCC_UNIDENTE\obj\Debug\App.g.cs
+C:\Users\ManutencaoEtec\Desktop\WPF_TCC_UNIDENTE\WPF_TCC_UNIDENTE\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ManutencaoEtec\Desktop\WPF_TCC_UNIDENTE\WPF_TCC_UNIDENTE\obj\Debug\Unidente_MarkupCompile.cache
+C:\Users\ManutencaoEtec\Desktop\WPF_TCC_UNIDENTE\WPF_TCC_UNIDENTE\obj\Debug\Unidente_MarkupCompile.lref
+C:\Users\ManutencaoEtec\Desktop\WPF_TCC_UNIDENTE\WPF_TCC_UNIDENTE\bin\Debug\Hidracom.exe.config
