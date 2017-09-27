@@ -1,0 +1,22 @@
+[Start of the Program]
+15:19:21.454 [9] ERROR Connection - Login failed for user '01359_14_A_1_2015'.  Reason: The password of the account has expired.
+15:23:17.602 [8] INFO  Databaselist - INSERT INTO tcc_observacao_servicos (nome_servico, observacao) VALUES ('ghghghg','hghghghg')
+15:23:18.134 [8] ERROR Databaselist - Nome de coluna 'nome_servico' inválido.
+Nome de coluna 'observacao' inválido.
+15:23:34.774 [8] INFO  Databaselist - INSERT INTO tcc_observacao_servicos (nome_servico, observacao) VALUES ('sadsadsadaa','eeeeeee')
+15:23:34.799 [8] ERROR Databaselist - Nome de coluna 'nome_servico' inválido.
+Nome de coluna 'observacao' inválido.
+[Start of the Program]
+15:36:10.978 [9] INFO  Databaselist - INSERT INTO tcc_pessoas (nome, endereco, bairro, cep, telefone, email, rg, cpf, cidade, datanasc, tipo, observacao) VALUES ('fds','fds','fds','fds','56456452','fds@www.com','132132132','12345678910','fds','27/09/2017','0','oi')
+15:36:43.555 [9] INFO  Databaselist - INSERT INTO tcc_observacao_servicos (nome_servico, observacao) VALUES ('jhj','jhjhj')
+15:37:04.264 [9] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '0'
+15:37:04.618 [9] ERROR HistoricoServicos - id
+15:37:14.570 [9] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '1'
+[Start of the Program]
+15:38:18.721 [10] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '1'
+15:38:32.738 [10] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '0'
+15:38:32.767 [10] ERROR HistoricoServicos - id
+[Start of the Program]
+16:52:23.211 [10] INFO  Databaselist - INSERT INTO tcc_pessoas (nome, endereco, bairro, cep, telefone, email, rg, cpf, cidade, datanasc, tipo, observacao) VALUES ('Mariu','Na escola','Vila Jardini','18061441','1566666666','dsadsa@gitnasdsa','','','Sorocaba','27/09/2017','1','sadasadassa')
+[Start of the Program]
+16:56:46.679 [8] INFO  Databaselist - INSERT INTO tcc_pessoas (nome, endereco, bairro, cep, telefone, email, rg, cpf, cidade, datanasc, tipo, observacao) VALUES ('Vinicius','Na casa','Santa fillo','31321323','2222222222','oio@lklkl.com','132132132','32131313213','Sorocaba','27/09/2017','0','lashduyafsdas')

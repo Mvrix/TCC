@@ -17,7 +17,7 @@ namespace TCC_Hidracom
         public Pessoas()
         {
             ID = 0;
-            SetName_ID("id");
+            SetName_ID("id_pessoa");
             SetTable("tcc_pessoas");
             SetFields(new string[] { "nome", "endereco", "bairro", "cep", "telefone", "email", "rg", "cpf", "cidade", "datanasc", "tipo", "observacao", });
         }
@@ -72,7 +72,7 @@ namespace TCC_Hidracom
                 {
                     list.Add(new Pessoas()
                     {
-                        ID = Convert.ToInt32(load["id"]),
+                        ID = Convert.ToInt32(load["id_pessoa"]),
                         Nome = load["nome"].ToString(),
                         Endereco = load["endereco"].ToString(),
                         Bairro = load["bairro"].ToString(),
@@ -116,7 +116,7 @@ namespace TCC_Hidracom
                 {
                     list.Add(new Pessoas()
                     {
-                        ID = Convert.ToInt32(load["id"]),
+                        ID = Convert.ToInt32(load["id_pessoa"]),
                         Nome = load["nome"].ToString(),
                         Endereco = load["endereco"].ToString(),
                         Bairro = load["bairro"].ToString(),
@@ -150,11 +150,11 @@ namespace TCC_Hidracom
         {
             if (ID == 0 || forceInsert)
             {
-                SetValues(new string[] { Nome, Endereco, Bairro, Cep, Telefone, Email, Rg, Cpf, Cidade, DataNasc.ToShortDateString(), Tipo.ToString(), Observacao });
+                SetValues(new string[] { Nome, Endereco, Bairro, Cep ?? default(string), Telefone ?? default(string), Email, Rg ?? default(string), Cpf ?? default(string), Cidade, DataNasc.ToShortDateString(), Tipo.ToString(), Observacao });
             }
             else
             {
-                SetValues(new string[] { Nome, Endereco, Bairro, Cep, Telefone, Email, Rg, Cpf, Cidade, DataNasc.ToShortDateString(), Tipo.ToString(), Observacao, ID.ToString() });
+                SetValues(new string[] { Nome, Endereco, Bairro, Cep ?? default(string), Telefone ?? default(string), Email, Rg ?? default(string), Cpf ?? default(string), Cidade, DataNasc.ToShortDateString(), Tipo.ToString(), Observacao, ID.ToString() });
             }
         }
 

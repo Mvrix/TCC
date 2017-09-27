@@ -14,7 +14,7 @@ namespace TCC_Hidracom
         public Observacao_Servico()
         {
             ID = 0;
-            SetName_ID("id");
+            SetName_ID("id_observacao_servicos");
             SetTable("tcc_observacao_servicos");
             SetFields(new string[] { "nome_servico", "observacao" });
         }
@@ -53,12 +53,20 @@ namespace TCC_Hidracom
 
                 while (load.Read())
                 {
-                    list.Add(new Observacao_Servico()
+                    var ob = new Observacao_Servico()
                     {
-                        ID = Convert.ToInt32(load["id"]),
-                        Nome_Servico = Convert.IsDBNull(load["nome_servico"]) ? default(string) : load["nome_servico"].ToString(),
-                        Observacao = Convert.IsDBNull(load["observacao"]) ? default(string) : load["observacao"].ToString(),
-                    });
+                        ID = Convert.ToInt32(load["id_observacao_servicos"]),
+                    };
+
+                    string nome_servico, observacao;
+
+                    if (load["nome_servico"].IsNotDBNull(out nome_servico))
+                        ob.Nome_Servico = nome_servico;
+
+                    if (load["observacao"].IsNotDBNull(out observacao))
+                        ob.Observacao = observacao;
+
+                    list.Add(ob);
                 }
                 
                 CloseConnection(sc);

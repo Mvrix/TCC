@@ -15,15 +15,14 @@ CREATE TABLE [tcc_pessoas]
 [datanasc] [datetime]  NULL,
 [tipo] [int] NULL, 
 [observacao] [nvarchar] (300) NULL,
-CONSTRAINT PK_tcc_pessoas PRIMARY KEY (id)
+CONSTRAINT PK_tcc_pessoas PRIMARY KEY (id_pessoa)
 )
-
 
 CREATE TABLE [tcc_marcas]
 (
 [id_marcas] [int] NOT NULL IDENTITY (1, 1),
 [marca] [nvarchar] (100) NULL,
-CONSTRAINT PK_tcc_marcas PRIMARY KEY (id)
+CONSTRAINT PK_tcc_marcas PRIMARY KEY (id_marcas)
 )
 
 
@@ -39,24 +38,37 @@ CREATE TABLE [tcc_produto]
 [id_produto] [int]  NOT NULL IDENTITY (1, 1),
 [capacidade] [nvarchar] (10) NULL,
 [descricao] [nvarchar] (50) NULL,
-[marca] [int] FOREIGN KEY REFERENCES tcc_marcas(id) null,
+[marca] [int] FOREIGN KEY REFERENCES tcc_marcas(id_marcas) null,
 [tipo] [nvarchar] (50) NULL,
 [tipo2] [nvarchar] (50) NULL,
 [precounit] [float]  NULL,
-CONSTRAINT PK_tcc_produto PRIMARY KEY (id)
+CONSTRAINT PK_tcc_produto PRIMARY KEY (id_produto)
 )
 
 --
 --VAI MOSTRAR OQ O SERVIÇOFAZ
 --
-
 CREATE TABLE [tcc_observacao_servicos]
 (
 [id_observacao_servicos] [int] NOT NULL IDENTITY (1, 1),
 [nome_servico] [nvarchar] (100) NULL,
 [observacao] [nvarchar] (200) NULL,
-CONSTRAINT PK_tcc_observacao_servicos PRIMARY KEY (id)
+CONSTRAINT PK_tcc_observacao_servicos PRIMARY KEY (id_observacao_servicos)
 )
+
+-- Vai guardar todas os pedidos por um servico
+CREATE TABLE [tcc_servicos]
+(
+[id_servicos] [int]  NOT NULL IDENTITY (1, 1),
+[observacao_servico_id] [int] FOREIGN KEY REFERENCES tcc_observacao_servicos(id_observacao_servicos) NULL,
+[pessoas_id] [int] FOREIGN KEY REFERENCES tcc_pessoas(id_pessoa) NULL,
+[tecnico_id] [int] FOREIGN KEY REFERENCES tcc_pessoas(id_pessoa) NULL,
+[data_marcada] [datetime] NULL,
+[observacao] [nvarchar] (100) NULL,
+[data_criado] [datetime] NULL, -- Vai ser timestamp
+CONSTRAINT PK_servicos PRIMARY KEY (id_servicos)
+)
+
 
 
 -- Table Ações --------------------------
@@ -68,19 +80,5 @@ CREATE TABLE [tcc_detalhe_acoes]
 [id_detalhe_acoes] [int]  NOT NULL IDENTITY (1, 1),
 [tipo] [nvarchar] (30) NULL,
 [descricao] [nvarchar] (150) NULL,
-CONSTRAINT PK_tcc_acoes PRIMARY KEY (id)
-)
-
--- Vai guardar todas os pedidos por um servico
-
-CREATE TABLE [tcc_servicos]
-(
-[id_servicos] [int]  NOT NULL IDENTITY (1, 1),
-[observacao_servico_id] [int] FOREIGN KEY REFERENCES tcc_observacao_servicos(id) NULL,
-[pessoas_id] [int] FOREIGN KEY REFERENCES tcc_pessoas(id) NULL,
-[pessoas_id] [int] FOREIGN KEY REFERENCES tcc_pessoas(id) NULL,
-[data_marcada] [datetime] NULL,
-[observacao] [nvarchar] (100) NULL,
-[data_criado] [datetime] NULL, -- Vai ser timestamp
-CONSTRAINT PK_servicos PRIMARY KEY (id)
+CONSTRAINT PK_tcc_acoes PRIMARY KEY (id_detalhe_acoes)
 )

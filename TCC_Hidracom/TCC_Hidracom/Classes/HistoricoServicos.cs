@@ -1,6 +1,8 @@
 ﻿using log4net;
 using System;
+using System.Linq;
 using System.Collections.Generic;
+
 
 namespace TCC_Hidracom
 {
@@ -17,9 +19,9 @@ namespace TCC_Hidracom
         public HistoricoServicos()
         {
             ID = 0;
-            SetName_ID("id");
+            SetName_ID("id_servicos");
             SetTable("tcc_servicos");
-            SetFields(new string[] { "tecnico_id", "cliente_id", "servico_id", "data_marcada", "observacao" });
+            SetFields(new string[] { "tecnico_id", "pessoas_id", "observacao_servico_id", "data_marcada", "observacao" });
         }
 
         #endregion
@@ -68,25 +70,40 @@ namespace TCC_Hidracom
         /// </summary>
         /// <param name="query">Query de consulta</param>
         /// <returns></returns>
-        public List<HistoricoServicos> Load(string query = null)
+        public List<HistoricoServicos> LoadHistoricos()
         {
             try
             {
                 var list = new List<HistoricoServicos>();
                 var sc = OpenConnection();
-                var load = string.IsNullOrEmpty(query) ? Read("SELECT ths.id, tt.nome as tecnico_id, tc.nome as cliente_id, ts.servico as servico_id, ths.data_marcada, ths.observacao FROM tcc_historico_servicos ths, tcc_clientes tc, tcc_servicos ts, tcc_tecnicos tt WHERE ths.cliente_id = tc.id AND ths.servico_id = ts.id AND ths.tecnico_id = tt.id", sc) : Read(query, sc);
+                var load = Read("select * from get_historico_servicos", sc);
 
                 while (load.Read())
                 {
-                    list.Add(new HistoricoServicos()
+                    var hs = new HistoricoServicos()
                     {
-                        ID = Convert.ToInt32(load["id"]),
-                        Tecnico = Convert.IsDBNull(load["tecnico_id"]) ? default(string) : load["tecnico_id"].ToString(),
-                        Cliente = Convert.IsDBNull(load["cliente_id"]) ? default(string) : load["cliente_id"].ToString(),
-                        Servico = Convert.IsDBNull(load["servico_id"]) ? default(string) : load["servico_id"].ToString(),
-                        DataMarcada = Convert.IsDBNull(load["data_marcada"]) ? default(DateTime) : Convert.ToDateTime(load["data_marcada"]),
-                        Observacao = Convert.IsDBNull(load["observacao"]) ? default(string) : load["observacao"].ToString(),
-                    });
+                        ID = Convert.ToInt32(load["id_servicos"]),
+                    };
+
+                    string nome_tecnico, nome_cliente, nome_servico, observacao;
+                    DateTime data_marcada;
+                    
+                    if (load["nome_cliente"].IsNotDBNull(out nome_cliente))
+                        hs.Cliente = nome_cliente;
+
+                    if (load["nome_tecnico"].IsNotDBNull(out nome_tecnico))
+                        hs.Tecnico = nome_tecnico;
+
+                    if (load["nome_servico"].IsNotDBNull(out nome_servico))
+                        hs.Servico = nome_servico;
+
+                    if (load["data_marcada"].IsNotDBNull(out data_marcada))
+                        hs.DataMarcada = data_marcada;
+
+                    if (load["observacao"].IsNotDBNull(out observacao))
+                        hs.Observacao = observacao;
+
+                    list.Add(hs);  
                 }
 
                 TotalResultados = list.Count;

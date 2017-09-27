@@ -144,6 +144,7 @@
     <Compile Include="Database\SerializeAndDeserialize.cs" />
     <Compile Include="DataModel\IconType.cs" />
     <Compile Include="Expression\ExpressionHelpers.cs" />
+    <Compile Include="Extensions\ExtensionsMethods.cs" />
     <Compile Include="IoC\IoC.cs" />
     <Compile Include="ValueConverters\Base\ApplicationQueueValueConverter.cs" />
     <Compile Include="ValueConverters\Base\BaseValueConverter.cs" />
@@ -208,6 +209,10 @@
     <Page Include="Style\Icons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Style\MaskTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Style\Scroll.xaml">
       <SubType>Designer</SubType>

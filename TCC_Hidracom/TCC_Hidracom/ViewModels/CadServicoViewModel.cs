@@ -57,7 +57,7 @@ namespace TCC_Hidracom
                 Obs_Servico = new Observacao_Servico();
 
                 DialogHost.Show(new Cadastrado("Cadastrado!"), "CadServicoDialog");
-                await Task.Delay(1000);
+                await Task.Delay(2000);
                 IsOpen = false;
             });
         }
