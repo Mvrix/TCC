@@ -59,7 +59,7 @@
 
                 <Button Content="Voltar"
                     Width="150"
-                    Command="{Binding BackCommand}"/>
+                    Command="{Binding BackCommand}" Click="Button_Click"/>
 
             </StackPanel>
         </Grid>

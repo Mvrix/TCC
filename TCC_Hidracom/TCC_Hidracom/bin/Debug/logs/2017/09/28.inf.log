@@ -22,3 +22,14 @@
 [End of the Program]
 [Start of the Program]
 [End of the Program]
+[Start of the Program]
+15:12:22.694 [9] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '0'
+15:12:41.976 [9] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '1'
+15:12:45.110 [9] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '0'
+[End of the Program]
+[Start of the Program]
+[End of the Program]
+[Start of the Program]
+[End of the Program]
+[Start of the Program]
+[End of the Program]

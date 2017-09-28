@@ -11,5 +11,10 @@ namespace TCC_Hidracom
         {
             
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
