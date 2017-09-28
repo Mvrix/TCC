@@ -1,0 +1,24 @@
+[Start of the Program]
+14:21:30.029 [8] INFO  Databaselist - INSERT INTO tcc_observacao_servicos (nome_servico, observacao) VALUES ('entregar cana','o intregador deve entregar cana')
+14:22:46.945 [8] INFO  Databaselist - INSERT INTO tcc_pessoas (nome, endereco, bairro, cep, telefone, email, rg, cpf, cidade, datanasc, tipo, observacao) VALUES ('NICHOLAS SALLES COSTA','RUA JOSE LEITE DO CANTO JUNIOR','JARDIM MONTREAL','18053374','1533917756','NICHOLAS_SALLES_COSTA@HOTMAIL.COM','371741658','45306403883','SOROCABA','08/05/2000','0','MUITO LINDO CUIDADO')
+14:24:13.305 [8] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '0'
+14:24:44.750 [8] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '0' AND id = 'nicholas' AND nome LIKE '%nicholas%' AND telefone LIKE '%nicholas%' AND rg LIKE '%nicholas%' AND cpf LIKE '%nicholas%'
+14:24:45.000 [8] ERROR HistoricoServicos - Nome de coluna 'id' inválido.
+14:24:48.439 [8] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '0'
+14:24:55.549 [8] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '0' AND id = 'NICHOLAS SALLES' AND nome LIKE '%NICHOLAS SALLES%' AND telefone LIKE '%NICHOLAS SALLES%' AND rg LIKE '%NICHOLAS SALLES%' AND cpf LIKE '%NICHOLAS SALLES%'
+14:24:55.575 [8] ERROR HistoricoServicos - Nome de coluna 'id' inválido.
+14:24:59.229 [8] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '0'
+14:25:05.484 [8] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '0' AND id = 'NICHOLAS SALLES COSTA' AND nome LIKE '%NICHOLAS SALLES COSTA%' AND telefone LIKE '%NICHOLAS SALLES COSTA%' AND rg LIKE '%NICHOLAS SALLES COSTA%' AND cpf LIKE '%NICHOLAS SALLES COSTA%'
+14:25:05.507 [8] ERROR HistoricoServicos - Nome de coluna 'id' inválido.
+14:25:07.484 [8] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '0' AND id = 'NICHOLAS SALLES COSTA' AND nome LIKE '%NICHOLAS SALLES COSTA%' AND telefone LIKE '%NICHOLAS SALLES COSTA%' AND rg LIKE '%NICHOLAS SALLES COSTA%' AND cpf LIKE '%NICHOLAS SALLES COSTA%'
+14:25:07.546 [8] ERROR HistoricoServicos - Nome de coluna 'id' inválido.
+14:25:11.693 [8] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '0'
+14:25:13.677 [8] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '0' AND id = '4' AND nome LIKE '%4%' AND telefone LIKE '%4%' AND rg LIKE '%4%' AND cpf LIKE '%4%'
+14:25:13.699 [8] ERROR HistoricoServicos - Nome de coluna 'id' inválido.
+14:25:22.409 [8] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '1'
+14:25:32.030 [8] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '0'
+[End of the Program]
+[Start of the Program]
+[End of the Program]
+[Start of the Program]
+[End of the Program]
