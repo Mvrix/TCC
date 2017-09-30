@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Hidracom\TCC_Hidracom\obj\Debug\
+C:\Users\roser\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\
 TCC_Hidracom
 none
 false
 DEBUG;TRACE
-C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Hidracom\TCC_Hidracom\App.xaml
+C:\Users\roser\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\App.xaml
 18578552757
 
-60-1253207638
-28-917813388
+60-27576302
+28-205622999
 Style\Colors.xaml;Style\Icons.xaml;Style\MaskTextBox.xaml;Style\Scroll.xaml;Style\ToggleButton.xaml;MainWindow.xaml;Views\HistoricoOs .xaml;Views\SaidaFunc.xaml;Views\Historico.xaml;Views\CadServicos .xaml;Views\Caixinhas\Cadastrado.xaml;Views\NovaTela.xaml;Views\CadCliente.xaml;Views\MenuItem.xaml;Views\None.xaml;Views\Pallete\Palette.xaml;Views\Pallete\UserControlPaletteSelector.xaml;Views\ViewPessoa.xaml;
 
-False
+True
 
