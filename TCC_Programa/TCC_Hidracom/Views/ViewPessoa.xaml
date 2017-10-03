@@ -57,7 +57,7 @@
                     <ColumnDefinition Width="25"/>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="1">
-                    <DataGrid Name="dgView" ItemsSource="{Binding ListPessoas}" AutoGenerateColumns="False" IsReadOnly="True" VerticalScrollBarVisibility="Auto" BorderBrush="{x:Null}">
+                    <DataGrid Name="dgView" ItemsSource="{Binding ListPessoas}" AutoGenerateColumns="False" IsReadOnly="True" VerticalScrollBarVisibility="Auto" BorderBrush="{x:Null}" SelectionChanged="dgView_SelectionChanged">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
                             <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" MaxWidth="180"/>

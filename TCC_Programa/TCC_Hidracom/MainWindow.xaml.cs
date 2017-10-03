@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using TCC_Hidracom.Views;
 
 namespace TCC_Hidracom
 {
@@ -236,19 +237,18 @@ namespace TCC_Hidracom
             };
             submenu[0].Click += async (sender, args) =>
             {
-                MyRadialMenu.IsOpen = false;
-                await Task.Delay(400);
-                //Abre algo
-                // new Algo();
+                Visibility = Visibility.Hidden;
+                await Task.Delay(400);                
+                new GerarOS().Show();
             };
             submenu[1].Click += async (sender, args) =>
             {
                 MyRadialMenu.IsOpen = false;
                 await Task.Delay(400);
                 //Abre algo
-                // new Algo();
+                // ();
             };
-            
+           
             submenu[2].Click += async (sender, args) =>
             {
                 MyRadialMenu.IsOpen = false;

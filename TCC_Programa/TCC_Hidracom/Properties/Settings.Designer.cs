@@ -22,5 +22,16 @@ namespace TCC_Hidracom.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=172.168.255.252;Initial Catalog=db_01359_14_A_1_2015;User ID=01359_14" +
+            "_A_1_2015;Password=123456Alfa")]
+        public string db_01359_14_A_1_2015ConnectionString {
+            get {
+                return ((string)(this["db_01359_14_A_1_2015ConnectionString"]));
+            }
+        }
     }
 }

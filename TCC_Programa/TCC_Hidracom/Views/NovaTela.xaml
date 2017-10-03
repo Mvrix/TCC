@@ -9,7 +9,5 @@
              TextElement.Foreground="{StaticResource MaterialDesignBody}"
              Background="{StaticResource MaterialDesignPaper}"
              Width="350" Height="650">
-    <Grid>
-     
-    </Grid>
+    <Grid RenderTransformOrigin="0.509,0.506"/>
 </Window>
