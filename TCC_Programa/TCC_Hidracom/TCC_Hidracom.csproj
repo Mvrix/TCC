@@ -155,6 +155,9 @@
     <Compile Include="Database\Databaselist.cs" />
     <Compile Include="Database\SerializeAndDeserialize.cs" />
     <Compile Include="DataModel\IconType.cs" />
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -178,11 +181,17 @@
     <Compile Include="ViewModels\ViewModelLocator.cs" />
     <Compile Include="ViewModels\ViewPessoaViewModel.cs" />
     <Compile Include="Views\Base\BasePage.cs" />
-    <Compile Include="Views\GerarOS.cs">
+    <Compile Include="Views\CadOS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\GerarOS.Designer.cs">
-      <DependentUpon>GerarOS.cs</DependentUpon>
+    <Compile Include="Views\CadOS.Designer.cs">
+      <DependentUpon>CadOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Historico_Servico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Historico_Servico.Designer.cs">
+      <DependentUpon>Historico_Servico.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\HistoricoOs .xaml.cs">
       <DependentUpon>HistoricoOs .xaml</DependentUpon>
@@ -211,19 +220,10 @@
     <Compile Include="Views\None.xaml.cs">
       <DependentUpon>None.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Pallete\Palette.xaml.cs">
-      <DependentUpon>Palette.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Pallete\UserControlPaletteSelector.xaml.cs">
-      <DependentUpon>UserControlPaletteSelector.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Resources\Resource1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ViewPessoa.xaml.cs">
-      <DependentUpon>ViewPessoa.xaml</DependentUpon>
     </Compile>
     <Page Include="Style\Colors.xaml">
       <SubType>Designer</SubType>
@@ -293,18 +293,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Pallete\Palette.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\Pallete\UserControlPaletteSelector.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\ViewPessoa.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -329,8 +317,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\GerarOS.resx">
-      <DependentUpon>GerarOS.cs</DependentUpon>
+    <EmbeddedResource Include="Views\CadOS.resx">
+      <DependentUpon>CadOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Historico_Servico.resx">
+      <DependentUpon>Historico_Servico.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="DataSet1.xsc">

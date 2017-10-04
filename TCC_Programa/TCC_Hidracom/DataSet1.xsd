@@ -6,14 +6,77 @@
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="db_01359_14_A_1_2015ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_01359_14_A_1_2015ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TCC_Hidracom.Properties.Settings.GlobalReference.Default.db_01359_14_A_1_2015ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
-        <Tables />
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="get_historico_servicosTableAdapter" GeneratorDataComponentClassName="get_historico_servicosTableAdapter" Name="get_historico_servicos" UserDataComponentName="get_historico_servicosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_01359_14_A_1_2015ConnectionString (Settings)" DbObjectName="db_01359_14_A_1_2015.dbo.get_historico_servicos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select * from get_historico_servicos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_servicos" DataSetColumn="id_servicos" />
+              <Mapping SourceColumn="nome_tecnico" DataSetColumn="nome_tecnico" />
+              <Mapping SourceColumn="nome_cliente" DataSetColumn="nome_cliente" />
+              <Mapping SourceColumn="nome_servico" DataSetColumn="nome_servico" />
+              <Mapping SourceColumn="data_marcada" DataSetColumn="data_marcada" />
+              <Mapping SourceColumn="observacao" DataSetColumn="observacao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded" />
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="get_historico_servicos" msprop:Generator_TableClassName="get_historico_servicosDataTable" msprop:Generator_TableVarName="tableget_historico_servicos" msprop:Generator_TablePropName="get_historico_servicos" msprop:Generator_RowDeletingName="get_historico_servicosRowDeleting" msprop:Generator_RowChangingName="get_historico_servicosRowChanging" msprop:Generator_RowEvHandlerName="get_historico_servicosRowChangeEventHandler" msprop:Generator_RowDeletedName="get_historico_servicosRowDeleted" msprop:Generator_UserTableName="get_historico_servicos" msprop:Generator_RowChangedName="get_historico_servicosRowChanged" msprop:Generator_RowEvArgName="get_historico_servicosRowChangeEvent" msprop:Generator_RowClassName="get_historico_servicosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_servicos" msprop:Generator_ColumnVarNameInTable="columnid_servicos" msprop:Generator_ColumnPropNameInRow="id_servicos" msprop:Generator_ColumnPropNameInTable="id_servicosColumn" msprop:Generator_UserColumnName="id_servicos" type="xs:int" />
+              <xs:element name="nome_tecnico" msprop:Generator_ColumnVarNameInTable="columnnome_tecnico" msprop:Generator_ColumnPropNameInRow="nome_tecnico" msprop:Generator_ColumnPropNameInTable="nome_tecnicoColumn" msprop:Generator_UserColumnName="nome_tecnico" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nome_cliente" msprop:Generator_ColumnVarNameInTable="columnnome_cliente" msprop:Generator_ColumnPropNameInRow="nome_cliente" msprop:Generator_ColumnPropNameInTable="nome_clienteColumn" msprop:Generator_UserColumnName="nome_cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nome_servico" msprop:Generator_ColumnVarNameInTable="columnnome_servico" msprop:Generator_ColumnPropNameInRow="nome_servico" msprop:Generator_ColumnPropNameInTable="nome_servicoColumn" msprop:Generator_UserColumnName="nome_servico" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="data_marcada" msprop:Generator_ColumnVarNameInTable="columndata_marcada" msprop:Generator_ColumnPropNameInRow="data_marcada" msprop:Generator_ColumnPropNameInTable="data_marcadaColumn" msprop:Generator_UserColumnName="data_marcada" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="observacao" msprop:Generator_ColumnVarNameInTable="columnobservacao" msprop:Generator_ColumnPropNameInRow="observacao" msprop:Generator_ColumnPropNameInTable="observacaoColumn" msprop:Generator_UserColumnName="observacao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:get_historico_servicos" />
+      <xs:field xpath="mstns:id_servicos" />
+    </xs:unique>
   </xs:element>
 </xs:schema>
