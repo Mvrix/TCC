@@ -282,6 +282,7 @@ namespace TCC_Hidracom
         private void RadialMenuCentralItem_Click(object sender, RoutedEventArgs e)
         {
             Visibility = Visibility.Hidden;
+           
         }
 
         #endregion
@@ -297,6 +298,7 @@ namespace TCC_Hidracom
         /// Diz se vai fechar agora
         /// </summary>
         public bool CloseNow { get; set; } = false;
+        
 
         #endregion
 

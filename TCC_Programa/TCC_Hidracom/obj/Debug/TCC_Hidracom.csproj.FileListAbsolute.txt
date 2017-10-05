@@ -451,3 +451,4 @@ C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\bin\Debug
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\bin\Debug\System.Windows.4.0.0.0.Fakes.dll
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\bin\Debug\System.Windows.4.0.0.0.Fakes.xml
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\TCC_Hidracom.Views.Visualizar.PesquisaCli.resources
+C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\TCC_Hidracom.csprojResolveAssemblyReference.cache
