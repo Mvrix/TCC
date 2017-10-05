@@ -30,7 +30,7 @@ namespace TCC_Hidracom.Views
 
         }
 
-        //selecionando a tabela e amostrando os dados
+        //selecionando a tabela e amostrando os dados NÃO ESTA FUNCIONANDO PRECIS AIDDA FAZER A FUCKING EVENTS NO GRID
 
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {

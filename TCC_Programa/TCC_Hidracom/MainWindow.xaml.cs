@@ -6,6 +6,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using TCC_Hidracom.Views;
+using TCC_Hidracom.Views.Visualizar;
 
 namespace TCC_Hidracom
 {
@@ -203,7 +204,7 @@ namespace TCC_Hidracom
             {
                 this.Visibility = Visibility.Hidden;
                 await Task.Delay(400);
-               // new ViewPessoa(0).Show();
+                new PesquisaCli().Show();
             };
 
             submenu[3].Click += async (sender, args) =>

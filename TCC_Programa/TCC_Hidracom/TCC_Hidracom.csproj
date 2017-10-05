@@ -241,6 +241,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Visualizar\PesquisaCli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Visualizar\PesquisaCli.Designer.cs">
+      <DependentUpon>PesquisaCli.cs</DependentUpon>
+    </Compile>
     <Page Include="Style\Colors.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -338,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Historico_Servico.resx">
       <DependentUpon>Historico_Servico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Visualizar\PesquisaCli.resx">
+      <DependentUpon>PesquisaCli.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="DataSet1.xsc">
