@@ -92,6 +92,8 @@ namespace TCC_Hidracom.Views
 
         private void CadOS_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet1.tcc_produto' table. You can move, or remove it, as needed.
+            this.tcc_produtoTableAdapter.Fill(this.dataSet1.tcc_produto);
             // TODO: This line of code loads data into the 'dataSet12.tcc_pessoas' table. You can move, or remove it, as needed.
             this.tcc_pessoasTableAdapter.Fill(this.dataSet12.tcc_pessoas);
             // TODO: This line of code loads data into the 'dataSet1.tcc_pessoas' table. You can move, or remove it, as needed.

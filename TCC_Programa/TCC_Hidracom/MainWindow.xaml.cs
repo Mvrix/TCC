@@ -127,7 +127,7 @@ namespace TCC_Hidracom
             {
                 this.Visibility = Visibility.Hidden;
                 await Task.Delay(400);
-                new CadServicos().Show();
+                new Produto().Show();
             };
             submenu[1].Click += async (sender, args) =>
             {
