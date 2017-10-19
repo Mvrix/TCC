@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows;
 using System.Windows.Input;
+using System.Data.SqlClient;
 
 namespace TCC_Hidracom.Views
 {
@@ -18,11 +19,54 @@ namespace TCC_Hidracom.Views
         public CadOS()
         {
             InitializeComponent();
+
+
+            PreencherFuncionario();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
 
+        public void PreencherFuncionario()
+        {
+            using (var conn = new SqlConnection(Properties.Settings.Default.db_01359_14_A_1_2015ConnectionString))
+            {
+                conn.Open();
+                using (var sc = new SqlCommand("SELECT * FROM tcc_pessoas where tipo = 1", conn))
+                {
+                    SqlDataReader reader;
+
+                    reader = sc.ExecuteReader();
+                    DataTable dt = new DataTable();
+
+                    dt.Columns.Add("id_pessoa", typeof(string));
+                    dt.Columns.Add("nome", typeof(string));
+
+                    dt.Load(reader);
+                    tecnicoss.ValueMember = "id_pessoa";
+                    tecnicoss.DisplayMember = "nome";
+                    tecnicoss.DataSource = dt;
+                }
+            }
+        }
+        public void PreencherServico()
+        {
+            using (var conn = new SqlConnection(Properties.Settings.Default.db_01359_14_A_1_2015ConnectionString))
+            {
+                conn.Open();
+                using (var sc = new SqlCommand("SELECT * FROM tcc_observacao_servicos", conn))
+                {
+                    SqlDataReader reader;
+
+                    reader = sc.ExecuteReader();
+                    DataTable dt = new DataTable();
+
+                    dt.Columns.Add("id_observacao_servicos", typeof(string));
+                    dt.Columns.Add("nome_servico", typeof(string));
+
+                    dt.Load(reader);                   
+                    servicoss.DisplayMember = "descricao";
+                    servicoss.DataSource = dt;
+                }
+            }
         }
 
         private void metroLabel1_Click(object sender, EventArgs e)
@@ -34,9 +78,6 @@ namespace TCC_Hidracom.Views
 
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<int> listaDosIdsNaGrid = new List<int>();
-            metroGrid1.Rows.Add(metroComboBox1.SelectedText);
-            listaDosIdsNaGrid.Add((int)metroComboBox1.SelectedValue);
         }
 
         private void metroLabel3_Click(object sender, EventArgs e)
@@ -51,6 +92,8 @@ namespace TCC_Hidracom.Views
 
         private void CadOS_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet12.tcc_pessoas' table. You can move, or remove it, as needed.
+            this.tcc_pessoasTableAdapter.Fill(this.dataSet12.tcc_pessoas);
             // TODO: This line of code loads data into the 'dataSet1.tcc_pessoas' table. You can move, or remove it, as needed.
             this.tcc_pessoasTableAdapter.Fill(this.dataSet1.tcc_pessoas);
 
@@ -69,7 +112,105 @@ namespace TCC_Hidracom.Views
 
         private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
         }
-    }
-}
+
+        private void fillByFuncionarioToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.tcc_pessoasTableAdapter.FillByFuncionario(this.dataSet1.tcc_pessoas);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillByFuncionario1ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.tcc_pessoasTableAdapter.FillByFuncionario1(this.dataSet1.tcc_pessoas);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillByFuncionarioToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.tcc_pessoasTableAdapter.FillByFuncionario(this.dataSet1.tcc_pessoas);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void metroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PreencherServico();
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            using (var conn = new SqlConnection(Properties.Settings.Default.db_01359_14_A_1_2015ConnectionString))
+            {
+                conn.Open();
+                using (var sc = new SqlCommand("SELECT * FROM tcc_pessoas where tipo = 0 and nome like '%" + txtNome.Text + "%'", conn))
+                {
+                    SqlDataReader reader;
+
+                    reader = sc.ExecuteReader();
+                    DataTable dt = new DataTable();
+
+                    dt.Columns.Add("id_pessoa", typeof(int));
+                    dt.Columns.Add("nome", typeof(string));
+                    dt.Columns.Add("endereco", typeof(string));
+                    dt.Columns.Add("bairro", typeof(string));
+                    dt.Columns.Add("cep", typeof(string));
+                    dt.Columns.Add("telefone", typeof(string));
+                    dt.Columns.Add("email", typeof(string));
+                    dt.Columns.Add("rg", typeof(string));
+                    dt.Columns.Add("cpf", typeof(string));
+                    dt.Columns.Add("cidade", typeof(string));
+                    dt.Columns.Add("datanasc", typeof(DateTime));
+                    dt.Columns.Add("observacao", typeof(string));
+
+
+                    dt.Load(reader);
+                    dgvCliente.DataSource = dt;
+                }
+            }
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            using (var conn = new SqlConnection(Properties.Settings.Default.db_01359_14_A_1_2015ConnectionString))
+            {
+                conn.Open();
+                string tecnico = tecnicoss.ValueMember;
+                string servico = servicoss.ValueMember;
+                DateTime DataBox = dataMarcada.Value;
+                string descricao = CampoTexto.Text;
+                string cliente = txtCliente.Text;
+
+                string query = $"INSERT INTO [dbo].[tcc_servicos] ([pessoas_id] ,[tecnico_id] ,[data_marcada] ,[observacao]) VALUES({cliente}, {tecnico}, {DataBox}, {descricao})";
+
+                new SqlCommand(query, conn).ExecuteNonQuery();
+            }
+        }
+
+        private void metroTextBox1_Click(object sender, EventArgs e)
+        {
+            txtCliente.Text = dgvCliente.SelectedRows[0].Cells[1].Value.ToString();
+        }
+     }
+   }

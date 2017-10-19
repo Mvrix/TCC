@@ -178,6 +178,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="db_01359_14_A_1_2015DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_01359_14_A_1_2015DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Expression\ExpressionHelpers.cs" />
     <Compile Include="Extensions\ExtensionsMethods.cs" />
     <Compile Include="IoC\IoC.cs" />
@@ -217,9 +222,6 @@
     </Compile>
     <Compile Include="Views\Historico.xaml.cs">
       <DependentUpon>Historico.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\CadServicos .xaml.cs">
-      <DependentUpon>CadServicos .xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Caixinhas\Cadastrado.xaml.cs">
       <DependentUpon>Cadastrado.xaml</DependentUpon>
@@ -291,10 +293,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\CadServicos .xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Views\Caixinhas\Cadastrado.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -361,6 +359,17 @@
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <Fakes Include="Fakes\System.Windows.fakes" />
+    <None Include="db_01359_14_A_1_2015DataSet.xsc">
+      <DependentUpon>db_01359_14_A_1_2015DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_01359_14_A_1_2015DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_01359_14_A_1_2015DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_01359_14_A_1_2015DataSet.xss">
+      <DependentUpon>db_01359_14_A_1_2015DataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
