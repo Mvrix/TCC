@@ -246,6 +246,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Services.Designer.cs">
+      <DependentUpon>Services.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Visualizar\PesquisaCli.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -348,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Historico_Servico.resx">
       <DependentUpon>Historico_Servico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Services.resx">
+      <DependentUpon>Services.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Visualizar\PesquisaCli.resx">
       <DependentUpon>PesquisaCli.cs</DependentUpon>

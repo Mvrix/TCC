@@ -29,16 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataMarcada = new MetroFramework.Controls.MetroDateTime();
-            this.servicoss = new MetroFramework.Controls.MetroComboBox();
             this.tecnicoss = new MetroFramework.Controls.MetroComboBox();
-            this.tccpessoasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new TCC_Hidracom.DataSet1();
-            this.tccpessoasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
@@ -47,50 +44,32 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.txtCliente = new MetroFramework.Controls.MetroTextBox();
             this.dgvCliente = new MetroFramework.Controls.MetroGrid();
-            this.idpessoaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bairroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cepDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datanascDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.observacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tccpessoasBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet12 = new TCC_Hidracom.DataSet1();
             this.txtNome = new MetroFramework.Controls.MetroTextBox();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.tccpessoasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.tcc_pessoasTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.tcc_pessoasTableAdapter();
-            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.CampoTexto = new System.Windows.Forms.RichTextBox();
-            this.dataSet11 = new TCC_Hidracom.DataSet1();
-            this.tccprodutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tcc_produtoTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.tcc_produtoTableAdapter();
+            this.servicoss = new MetroFramework.Controls.MetroComboBox();
+            this.tcc_observacao_servicosTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.tcc_observacao_servicosTableAdapter();
+            this.dataSet11 = new TCC_Hidracom.DataSet1();
+            this.tccpessoasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tccobservacaoservicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tccpessoasBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tccpessoasBindingSource1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tccpessoasBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tccpessoasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tccprodutoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tccpessoasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tccobservacaoservicosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataMarcada);
             this.groupBox1.Controls.Add(this.servicoss);
+            this.groupBox1.Controls.Add(this.dataMarcada);
             this.groupBox1.Controls.Add(this.tecnicoss);
             this.groupBox1.Controls.Add(this.metroLabel3);
             this.groupBox1.Controls.Add(this.metroLabel2);
@@ -110,21 +89,9 @@
             this.dataMarcada.Size = new System.Drawing.Size(245, 29);
             this.dataMarcada.TabIndex = 20;
             // 
-            // servicoss
-            // 
-            this.servicoss.FormattingEnabled = true;
-            this.servicoss.ItemHeight = 23;
-            this.servicoss.Location = new System.Drawing.Point(87, 67);
-            this.servicoss.Name = "servicoss";
-            this.servicoss.Size = new System.Drawing.Size(245, 29);
-            this.servicoss.TabIndex = 16;
-            this.servicoss.UseSelectable = true;
-            this.servicoss.SelectedIndexChanged += new System.EventHandler(this.metroComboBox2_SelectedIndexChanged);
-            // 
             // tecnicoss
             // 
-            this.tecnicoss.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tccpessoasBindingSource2, "nome", true));
-            this.tecnicoss.DataSource = this.tccpessoasBindingSource1;
+            this.tecnicoss.DataSource = this.tccpessoasBindingSource;
             this.tecnicoss.DisplayMember = "nome";
             this.tecnicoss.FormattingEnabled = true;
             this.tecnicoss.ItemHeight = 23;
@@ -136,20 +103,10 @@
             this.tecnicoss.ValueMember = "id_pessoa";
             this.tecnicoss.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
             // 
-            // tccpessoasBindingSource2
-            // 
-            this.tccpessoasBindingSource2.DataMember = "tcc_pessoas";
-            this.tccpessoasBindingSource2.DataSource = this.dataSet1;
-            // 
             // dataSet1
             // 
             this.dataSet1.DataSetName = "DataSet1";
             this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tccpessoasBindingSource1
-            // 
-            this.tccpessoasBindingSource1.DataMember = "tcc_pessoas";
-            this.tccpessoasBindingSource1.DataSource = this.dataSet1;
             // 
             // metroLabel3
             // 
@@ -247,145 +204,46 @@
             // dgvCliente
             // 
             this.dgvCliente.AllowUserToResizeRows = false;
-            this.dgvCliente.AutoGenerateColumns = false;
             this.dgvCliente.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCliente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvCliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idpessoaDataGridViewTextBoxColumn,
-            this.nomeDataGridViewTextBoxColumn,
-            this.enderecoDataGridViewTextBoxColumn,
-            this.bairroDataGridViewTextBoxColumn,
-            this.cepDataGridViewTextBoxColumn,
-            this.telefoneDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.rgDataGridViewTextBoxColumn,
-            this.cpfDataGridViewTextBoxColumn,
-            this.cidadeDataGridViewTextBoxColumn,
-            this.datanascDataGridViewTextBoxColumn,
-            this.observacaoDataGridViewTextBoxColumn});
-            this.dgvCliente.DataSource = this.tccpessoasBindingSource3;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCliente.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCliente.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvCliente.EnableHeadersVisualStyles = false;
             this.dgvCliente.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvCliente.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvCliente.Location = new System.Drawing.Point(7, 49);
             this.dgvCliente.Name = "dgvCliente";
             this.dgvCliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvCliente.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCliente.Size = new System.Drawing.Size(1293, 151);
             this.dgvCliente.TabIndex = 9;
             this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
-            // 
-            // idpessoaDataGridViewTextBoxColumn
-            // 
-            this.idpessoaDataGridViewTextBoxColumn.DataPropertyName = "id_pessoa";
-            this.idpessoaDataGridViewTextBoxColumn.HeaderText = "Código Cliente";
-            this.idpessoaDataGridViewTextBoxColumn.Name = "idpessoaDataGridViewTextBoxColumn";
-            this.idpessoaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            // 
-            // enderecoDataGridViewTextBoxColumn
-            // 
-            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "endereco";
-            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereço";
-            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
-            // 
-            // bairroDataGridViewTextBoxColumn
-            // 
-            this.bairroDataGridViewTextBoxColumn.DataPropertyName = "bairro";
-            this.bairroDataGridViewTextBoxColumn.HeaderText = "Bairro";
-            this.bairroDataGridViewTextBoxColumn.Name = "bairroDataGridViewTextBoxColumn";
-            // 
-            // cepDataGridViewTextBoxColumn
-            // 
-            this.cepDataGridViewTextBoxColumn.DataPropertyName = "cep";
-            this.cepDataGridViewTextBoxColumn.HeaderText = "CEP";
-            this.cepDataGridViewTextBoxColumn.Name = "cepDataGridViewTextBoxColumn";
-            // 
-            // telefoneDataGridViewTextBoxColumn
-            // 
-            this.telefoneDataGridViewTextBoxColumn.DataPropertyName = "telefone";
-            this.telefoneDataGridViewTextBoxColumn.HeaderText = "Telefone";
-            this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // rgDataGridViewTextBoxColumn
-            // 
-            this.rgDataGridViewTextBoxColumn.DataPropertyName = "rg";
-            this.rgDataGridViewTextBoxColumn.HeaderText = "RG";
-            this.rgDataGridViewTextBoxColumn.Name = "rgDataGridViewTextBoxColumn";
-            // 
-            // cpfDataGridViewTextBoxColumn
-            // 
-            this.cpfDataGridViewTextBoxColumn.DataPropertyName = "cpf";
-            this.cpfDataGridViewTextBoxColumn.HeaderText = "CPF";
-            this.cpfDataGridViewTextBoxColumn.Name = "cpfDataGridViewTextBoxColumn";
-            // 
-            // cidadeDataGridViewTextBoxColumn
-            // 
-            this.cidadeDataGridViewTextBoxColumn.DataPropertyName = "cidade";
-            this.cidadeDataGridViewTextBoxColumn.HeaderText = "Cidade";
-            this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
-            // 
-            // datanascDataGridViewTextBoxColumn
-            // 
-            this.datanascDataGridViewTextBoxColumn.DataPropertyName = "datanasc";
-            this.datanascDataGridViewTextBoxColumn.HeaderText = "Data de nascimento";
-            this.datanascDataGridViewTextBoxColumn.Name = "datanascDataGridViewTextBoxColumn";
-            this.datanascDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // observacaoDataGridViewTextBoxColumn
-            // 
-            this.observacaoDataGridViewTextBoxColumn.DataPropertyName = "observacao";
-            this.observacaoDataGridViewTextBoxColumn.HeaderText = "Observação";
-            this.observacaoDataGridViewTextBoxColumn.Name = "observacaoDataGridViewTextBoxColumn";
-            // 
-            // tccpessoasBindingSource3
-            // 
-            this.tccpessoasBindingSource3.DataMember = "tcc_pessoas";
-            this.tccpessoasBindingSource3.DataSource = this.dataSet12;
-            // 
-            // dataSet12
-            // 
-            this.dataSet12.DataSetName = "DataSet1";
-            this.dataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtNome
             // 
@@ -428,14 +286,9 @@
             this.metroButton3.UseSelectable = true;
             this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
-            // tccpessoasBindingSource
-            // 
-            this.tccpessoasBindingSource.DataMember = "tcc_pessoas";
-            this.tccpessoasBindingSource.DataSource = this.dataSet1;
-            // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(672, 429);
+            this.metroButton1.Location = new System.Drawing.Point(649, 429);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(75, 23);
             this.metroButton1.TabIndex = 15;
@@ -446,7 +299,7 @@
             // metroButton2
             // 
             this.metroButton2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.metroButton2.Location = new System.Drawing.Point(591, 429);
+            this.metroButton2.Location = new System.Drawing.Point(568, 429);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(75, 23);
             this.metroButton2.TabIndex = 16;
@@ -457,11 +310,6 @@
             // tcc_pessoasTableAdapter
             // 
             this.tcc_pessoasTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataSet1BindingSource
-            // 
-            this.dataSet1BindingSource.DataSource = this.dataSet1;
-            this.dataSet1BindingSource.Position = 0;
             // 
             // metroLabel4
             // 
@@ -480,19 +328,42 @@
             this.CampoTexto.TabIndex = 19;
             this.CampoTexto.Text = "Adicione descrição de serviço aqui!";
             // 
+            // tcc_produtoTableAdapter
+            // 
+            this.tcc_produtoTableAdapter.ClearBeforeFill = true;
+            // 
+            // servicoss
+            // 
+            this.servicoss.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tccobservacaoservicosBindingSource, "nome_servico", true));
+            this.servicoss.DataSource = this.tccobservacaoservicosBindingSource;
+            this.servicoss.DisplayMember = "nome_servico";
+            this.servicoss.FormattingEnabled = true;
+            this.servicoss.ItemHeight = 23;
+            this.servicoss.Location = new System.Drawing.Point(87, 67);
+            this.servicoss.Name = "servicoss";
+            this.servicoss.Size = new System.Drawing.Size(245, 29);
+            this.servicoss.TabIndex = 21;
+            this.servicoss.UseSelectable = true;
+            this.servicoss.ValueMember = "id_observacao_servicos";
+            // 
+            // tcc_observacao_servicosTableAdapter
+            // 
+            this.tcc_observacao_servicosTableAdapter.ClearBeforeFill = true;
+            // 
             // dataSet11
             // 
             this.dataSet11.DataSetName = "DataSet1";
             this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // tccprodutoBindingSource
+            // tccpessoasBindingSource
             // 
-            this.tccprodutoBindingSource.DataMember = "tcc_produto";
-            this.tccprodutoBindingSource.DataSource = this.dataSet1;
+            this.tccpessoasBindingSource.DataMember = "tcc_pessoas";
+            this.tccpessoasBindingSource.DataSource = this.dataSet11;
             // 
-            // tcc_produtoTableAdapter
+            // tccobservacaoservicosBindingSource
             // 
-            this.tcc_produtoTableAdapter.ClearBeforeFill = true;
+            this.tccobservacaoservicosBindingSource.DataMember = "tcc_observacao_servicos";
+            this.tccobservacaoservicosBindingSource.DataSource = this.dataSet11;
             // 
             // CadOS
             // 
@@ -512,18 +383,13 @@
             this.Load += new System.EventHandler(this.CadOS_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tccpessoasBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tccpessoasBindingSource1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tccpessoasBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tccpessoasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tccprodutoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tccpessoasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tccobservacaoservicosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -537,39 +403,23 @@
         private MetroFramework.Controls.MetroComboBox tecnicoss;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroComboBox servicoss;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroGrid dgvCliente;
         private MetroFramework.Controls.MetroTextBox txtNome;
         private MetroFramework.Controls.MetroButton metroButton3;
         private DataSet1 dataSet1;
-        private System.Windows.Forms.BindingSource tccpessoasBindingSource;
         private DataSet1TableAdapters.tcc_pessoasTableAdapter tcc_pessoasTableAdapter;
-        private System.Windows.Forms.BindingSource tccpessoasBindingSource2;
-        private System.Windows.Forms.BindingSource tccpessoasBindingSource1;
-        private System.Windows.Forms.BindingSource dataSet1BindingSource;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroDateTime dataMarcada;
         private System.Windows.Forms.RichTextBox CampoTexto;
-        private DataSet1 dataSet11;
-        private DataSet1 dataSet12;
-        private System.Windows.Forms.BindingSource tccpessoasBindingSource3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idpessoaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bairroDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cepDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rgDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cpfDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cidadeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datanascDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn observacaoDataGridViewTextBoxColumn;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroTextBox txtCliente;
-        private System.Windows.Forms.BindingSource tccprodutoBindingSource;
         private DataSet1TableAdapters.tcc_produtoTableAdapter tcc_produtoTableAdapter;
+        private MetroFramework.Controls.MetroComboBox servicoss;
+        private DataSet1TableAdapters.tcc_observacao_servicosTableAdapter tcc_observacao_servicosTableAdapter;
+        private DataSet1 dataSet11;
+        private System.Windows.Forms.BindingSource tccpessoasBindingSource;
+        private System.Windows.Forms.BindingSource tccobservacaoservicosBindingSource;
     }
 }

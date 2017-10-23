@@ -449,3 +449,4 @@ C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\bin\Debug
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\TCC_Hidracom.Views.Visualizar.PesquisaCli.resources
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\TCC_Hidracom.csprojResolveAssemblyReference.cache
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\TCC_Hidracom.Views.Produto.resources
+C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\TCC_Hidracom.Views.Services.resources

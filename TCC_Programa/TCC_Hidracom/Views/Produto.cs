@@ -58,7 +58,7 @@ namespace TCC_Hidracom.Views
 
                 string query = $"INSERT INTO [dbo].[tcc_produto] ([quantidade] ,[descricao] ,[marca] ,[precounit]) VALUES({quantidade}, '{descricao}', '{marca}', {preco})";
 
-                new SqlCommand(query, conn).ExecuteNonQuery();
+                new SqlCommand(query, conn);
                 MetroMessageBox.Show(this, "Novo produto cadastrado");
             }
         }

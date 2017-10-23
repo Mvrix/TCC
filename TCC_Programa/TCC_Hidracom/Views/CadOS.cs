@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using System.Windows;
 using System.Windows.Input;
 using System.Data.SqlClient;
+using MetroFramework;
+
 
 namespace TCC_Hidracom.Views
 {
@@ -92,10 +94,18 @@ namespace TCC_Hidracom.Views
 
         private void CadOS_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet11.tcc_pessoas' table. You can move, or remove it, as needed.
+            this.tcc_pessoasTableAdapter.Fill(this.dataSet11.tcc_pessoas);
+            // TODO: This line of code loads data into the 'dataSet1.tcc_observacao_servicos' table. You can move, or remove it, as needed.
+            this.tcc_observacao_servicosTableAdapter.Fill(this.dataSet1.tcc_observacao_servicos);
+            // TODO: This line of code loads data into the 'dataSet13.tcc_observacao_servicos' table. You can move, or remove it, as needed.
+           
+            // TODO: This line of code loads data into the 'dataSet1.tcc_observacao_servicos' table. You can move, or remove it, as needed.
+            this.tcc_observacao_servicosTableAdapter.Fill(this.dataSet1.tcc_observacao_servicos);
             // TODO: This line of code loads data into the 'dataSet1.tcc_produto' table. You can move, or remove it, as needed.
             this.tcc_produtoTableAdapter.Fill(this.dataSet1.tcc_produto);
             // TODO: This line of code loads data into the 'dataSet12.tcc_pessoas' table. You can move, or remove it, as needed.
-            this.tcc_pessoasTableAdapter.Fill(this.dataSet12.tcc_pessoas);
+            
             // TODO: This line of code loads data into the 'dataSet1.tcc_pessoas' table. You can move, or remove it, as needed.
             this.tcc_pessoasTableAdapter.Fill(this.dataSet1.tcc_pessoas);
 
@@ -195,8 +205,8 @@ namespace TCC_Hidracom.Views
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            using (var conn = new SqlConnection(Properties.Settings.Default.db_01359_14_A_1_2015ConnectionString))
-            {
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.db_01359_14_A_1_2015ConnectionString);
+          
                 conn.Open();
                 string tecnico = tecnicoss.ValueMember;
                 string servico = servicoss.ValueMember;
@@ -204,10 +214,11 @@ namespace TCC_Hidracom.Views
                 string descricao = CampoTexto.Text;
                 string cliente = txtCliente.Text;
 
-                string query = $"INSERT INTO [dbo].[tcc_servicos] ([pessoas_id] ,[tecnico_id] ,[data_marcada] ,[observacao]) VALUES({cliente}, {tecnico}, {DataBox}, {descricao})";
-
-                new SqlCommand(query, conn).ExecuteNonQuery();
-            }
+          
+            SqlCommand comandoIN = new SqlCommand ("INSERT INTO [dbo].[tcc_servicos] ([pessoas_id] ,[tecnico_id] ,[data_marcada] ,[observacao_servico_id]) VALUES({cliente}, {tecnico}, {DataBox}, {servico}, {descricao}");                
+            comandoIN.ExecuteNonQuery();
+            conn.Close();
+           
         }
 
         private void metroTextBox1_Click(object sender, EventArgs e)
