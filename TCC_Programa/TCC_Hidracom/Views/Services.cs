@@ -35,14 +35,10 @@ namespace TCC_Hidracom.Views
                 conn.Open();
                 string nominho = NomeBox.Text;
                 string observac = ObsBox.Text;
-
                 
-
-                string quer = $"INSERT INTO [dbo].[tcc_observacao_servicos] ([nome_servico] ,[observacao]) VALUES({nominho}, {observac})";
-
-
-                new SqlCommand(quer, conn);         
-                MetroMessageBox.Show(this, "Serviço Cadastrado");
+                SqlCommand cmma = new SqlCommand($"INSERT INTO [dbo].[tcc_observacao_servicos] ([nome_servico] ,[observacao]) VALUES('{nominho}', '{observac}')",conn);
+                cmma.ExecuteNonQuery();                        
+                MetroMessageBox.Show(this, "Serviço Cadastrado!");
             }
         }
 

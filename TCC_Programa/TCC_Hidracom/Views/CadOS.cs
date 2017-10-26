@@ -94,8 +94,12 @@ namespace TCC_Hidracom.Views
 
         private void CadOS_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet1.tcc_produto' table. You can move, or remove it, as needed.
+            this.tcc_produtoTableAdapter.Fill(this.dataSet1.tcc_produto);
+            // TODO: This line of code loads data into the 'dataSet1.tcc_observacao_servicos' table. You can move, or remove it, as needed.
+            this.tcc_observacao_servicosTableAdapter.Fill(this.dataSet1.tcc_observacao_servicos);
             // TODO: This line of code loads data into the 'dataSet11.tcc_pessoas' table. You can move, or remove it, as needed.
-            this.tcc_pessoasTableAdapter.Fill(this.dataSet11.tcc_pessoas);
+           
             // TODO: This line of code loads data into the 'dataSet1.tcc_observacao_servicos' table. You can move, or remove it, as needed.
             this.tcc_observacao_servicosTableAdapter.Fill(this.dataSet1.tcc_observacao_servicos);
             // TODO: This line of code loads data into the 'dataSet13.tcc_observacao_servicos' table. You can move, or remove it, as needed.
@@ -205,20 +209,21 @@ namespace TCC_Hidracom.Views
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(Properties.Settings.Default.db_01359_14_A_1_2015ConnectionString);
-          
+            using (var conn = new SqlConnection(Properties.Settings.Default.db_01359_14_A_1_2015ConnectionString))
+            {
                 conn.Open();
-                string tecnico = tecnicoss.ValueMember;
-                string servico = servicoss.ValueMember;
+                int tecnico = Convert.ToInt32(tecnicoss.SelectedValue);
+                int servico = Convert.ToInt32(servicoss.SelectedValue);
                 DateTime DataBox = dataMarcada.Value;
                 string descricao = CampoTexto.Text;
-                string cliente = txtCliente.Text;
+                int cliente = Convert.ToInt32(dgvCliente.SelectedRows[0].Cells[0].Value.ToString());
+                int prodd = Convert.ToInt32(produtoBox.SelectedValue);
 
-          
-            SqlCommand comandoIN = new SqlCommand ("INSERT INTO [dbo].[tcc_servicos] ([pessoas_id] ,[tecnico_id] ,[data_marcada] ,[observacao_servico_id]) VALUES({cliente}, {tecnico}, {DataBox}, {servico}, {descricao}");                
-            comandoIN.ExecuteNonQuery();
-            conn.Close();
-           
+
+                SqlCommand comandoIN = new SqlCommand($"INSERT INTO [dbo].[tcc_servicos] ([pessoas_id] ,[tecnico_id] ,[data_marcada] ,[observacao_servico_id], [produto_id], [observacao]) VALUES({cliente}, {tecnico}, '{DataBox.ToShortDateString()}', {servico}, {prodd}, '{descricao}')", conn);
+                comandoIN.ExecuteNonQuery();
+                MetroMessageBox.Show(this,"Nova ordem de serviço cadastrada com sucesso!");
+            }
         }
 
         private void metroTextBox1_Click(object sender, EventArgs e)

@@ -194,6 +194,7 @@
             this.metroButton2.TabIndex = 30;
             this.metroButton2.Text = "Voltar";
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // Produto
             // 

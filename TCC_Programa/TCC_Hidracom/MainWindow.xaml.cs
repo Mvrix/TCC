@@ -99,7 +99,7 @@ namespace TCC_Hidracom
             {
                 new RadialMenuItem
                 {
-                    Content = new MenuItem("Tipo de Serviço", "appbar_service"),
+                    Content = new MenuItem("Tipo \n de Serviço", "appbar_service"),
                     ArrowBackground = Brushes.Transparent
                 },
                 new RadialMenuItem
@@ -109,12 +109,17 @@ namespace TCC_Hidracom
                 },
                 new RadialMenuItem
                 {
-                    Content = new MenuItem("Ordem de Serviço", "appbar_billboard"),
+                    Content = new MenuItem("Ordem \n de Serviço", "appbar_billboard"),
                     ArrowBackground = Brushes.Transparent
                 },
                 new RadialMenuItem
                 {
                     Content = new TextBlock { Text = "Funcionário" },
+                    ArrowBackground = Brushes.Transparent
+                },
+                 new RadialMenuItem
+                {
+                    Content = new TextBlock { Text = "Produto" },
                     ArrowBackground = Brushes.Transparent
                 },
                 new RadialMenuItem()
@@ -154,8 +159,14 @@ namespace TCC_Hidracom
                 MyRadialMenu.Items = Menu;
                 MyRadialMenu.IsOpen = true;
             };
+            submenu[4].Click += async (sender, args) =>
+            {
+                this.Visibility = Visibility.Hidden;
+                await Task.Delay(400);
+                new Produto().Show();
+            };
 
-            return submenu;
+                return submenu;
         }
 
         /// <summary>

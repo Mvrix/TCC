@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Components;
 using System.Data.SqlClient;
-
+using System.Globalization;
+using System.Windows;
 
 namespace TCC_Hidracom.Views
 {
@@ -54,13 +55,20 @@ namespace TCC_Hidracom.Views
                 string descricao = txtDescricao.Text;
                 string marca = txtMarca.Text;
                 string quantidade = txtQuant.Text;
-                string preco = txtPreco.Text;                
+                double preco = Convert.ToDouble(txtPreco.Text);
+                preco.ToString("###0.00", CultureInfo.InvariantCulture);
+                                
 
-                string query = $"INSERT INTO [dbo].[tcc_produto] ([quantidade] ,[descricao] ,[marca] ,[precounit]) VALUES({quantidade}, '{descricao}', '{marca}', {preco})";
-
-                new SqlCommand(query, conn);
+                SqlCommand comm = new SqlCommand($"INSERT INTO [dbo].[tcc_produto] ([quantidade] ,[descricao] ,[marca] ,[precounit]) VALUES('{quantidade}', '{descricao}', '{marca}', '{preco}')", conn);
+                comm.ExecuteNonQuery();                   
                 MetroMessageBox.Show(this, "Novo produto cadastrado");
             }
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            System.Windows.Application.Current.MainWindow.Visibility = Visibility.Visible;
+            Close();
         }
     }
 }
