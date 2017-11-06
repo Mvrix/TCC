@@ -55,7 +55,7 @@
     </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\Tooth2.ico</ApplicationIcon>
+    <ApplicationIcon>Red.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Dragablz, Version=0.0.3.186, Culture=neutral, processorArchitecture=MSIL">
@@ -101,6 +101,8 @@
     <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
@@ -115,6 +117,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Windows.4.0.0.0.Fakes">
       <HintPath>FakesAssemblies\System.Windows.4.0.0.0.Fakes.dll</HintPath>
@@ -152,6 +155,7 @@
     <Compile Include="Classes\Pessoas.cs" />
     <Compile Include="Classes\HistoricoServicos.cs" />
     <Compile Include="Classes\Observacao_Servico.cs" />
+    <Compile Include="Classes\Selects.cs" />
     <Compile Include="Command\AnotherCommandImplementation.cs" />
     <Compile Include="Command\NotifyIcon\CloseWindowCommand.cs" />
     <Compile Include="Command\NotifyIcon\CommandBase.cs" />
@@ -220,8 +224,11 @@
     <Compile Include="Views\HistoricoOs .xaml.cs">
       <DependentUpon>HistoricoOs .xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SaidaFunc.xaml.cs">
-      <DependentUpon>SaidaFunc.xaml</DependentUpon>
+    <Compile Include="Views\ReportHistorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ReportHistorico.Designer.cs">
+      <DependentUpon>ReportHistorico.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Historico.xaml.cs">
       <DependentUpon>Historico.xaml</DependentUpon>
@@ -245,6 +252,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SaidaFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SaidaFuncionario.Designer.cs">
+      <DependentUpon>SaidaFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Services.cs">
       <SubType>Form</SubType>
@@ -294,10 +307,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\SaidaFunc.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Views\Historico.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -342,6 +351,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Resources\Resource1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
@@ -354,6 +365,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Historico_Servico.resx">
       <DependentUpon>Historico_Servico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportHistorico.resx">
+      <DependentUpon>ReportHistorico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SaidaFuncionario.resx">
+      <DependentUpon>SaidaFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Services.resx">
       <DependentUpon>Services.cs</DependentUpon>
@@ -388,6 +405,7 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\HistoricoServicos.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

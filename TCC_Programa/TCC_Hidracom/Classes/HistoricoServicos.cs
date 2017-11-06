@@ -117,6 +117,61 @@ namespace TCC_Hidracom
         }
 
         /// <summary>
+        /// Método que carregará as informações relevantes a essa tabela no banco.
+        /// Por padrão, ele busca todas as informações no banco, caso queira uma informações diferente
+        /// basta passar como parâmetro a query.
+        /// Obs: Mesmo os campos sendo com final _id, a query padrão ela retorna o nome do cliente com base no seu ID cadastrado
+        /// </summary>
+        /// <param name="query">Query de consulta</param>
+        /// <returns></returns>
+        public List<HistoricoServicos> Load(string query)
+        {
+            try
+            {
+                var list = new List<HistoricoServicos>();
+                var sc = OpenConnection();
+                var load = Read(query, sc);
+
+                while (load.Read())
+                {
+                    var hs = new HistoricoServicos()
+                    {
+                        ID = Convert.ToInt32(load["id_servicos"]),
+                    };
+
+                    string nome_tecnico, nome_cliente, nome_servico, observacao;
+                    DateTime data_marcada;
+
+                    if (load["nome_cliente"].IsNotDBNull(out nome_cliente))
+                        hs.Cliente = nome_cliente;
+
+                    if (load["nome_tecnico"].IsNotDBNull(out nome_tecnico))
+                        hs.Tecnico = nome_tecnico;
+
+                    if (load["nome_servico"].IsNotDBNull(out nome_servico))
+                        hs.Servico = nome_servico;
+
+                    if (load["data_marcada"].IsNotDBNull(out data_marcada))
+                        hs.DataMarcada = data_marcada;
+
+                    if (load["observacao"].IsNotDBNull(out observacao))
+                        hs.Observacao = observacao;
+
+                    list.Add(hs);
+                }
+
+                TotalResultados = list.Count;
+                CloseConnection(sc);
+                return list;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+
+        /// <summary>
         /// Retorna uma instancia
         /// </summary>
         /// <returns></returns>

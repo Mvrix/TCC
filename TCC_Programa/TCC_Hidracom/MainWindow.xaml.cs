@@ -263,8 +263,8 @@ namespace TCC_Hidracom
             submenu[0].Click += async (sender, args) =>
             {
                 Visibility = Visibility.Hidden;
-                await Task.Delay(400);                
-                new Historico_Servico().Show();
+                await Task.Delay(400);
+                new ReportHistorico(new HistoricoServicos().LoadHistoricos()).Show();
             };
             submenu[1].Click += async (sender, args) =>
             {
