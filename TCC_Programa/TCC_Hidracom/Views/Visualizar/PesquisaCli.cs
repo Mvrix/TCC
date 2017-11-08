@@ -37,5 +37,10 @@ namespace TCC_Hidracom.Views.Visualizar
             System.Windows.Application.Current.MainWindow.Visibility = Visibility.Visible;
             Close();
         }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

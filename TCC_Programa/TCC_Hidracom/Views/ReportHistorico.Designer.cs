@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.HistoricoServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.HistoricoServicosBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -41,10 +42,22 @@
             reportDataSource1.Value = this.HistoricoServicosBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TCC_Hidracom.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 12);
+            this.reportViewer1.Location = new System.Drawing.Point(12, 63);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(645, 360);
+            this.reportViewer1.Size = new System.Drawing.Size(728, 325);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.metroButton2.Location = new System.Drawing.Point(334, 394);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.TabIndex = 17;
+            this.metroButton2.Text = "Voltar";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // HistoricoServicosBindingSource
             // 
@@ -54,10 +67,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 384);
+            this.ClientSize = new System.Drawing.Size(754, 431);
+            this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.reportViewer1);
             this.Name = "ReportHistorico";
-            this.Text = "ReportHistorico";
+            this.Text = "Relatório de O.S";
+            this.Load += new System.EventHandler(this.ReportHistorico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HistoricoServicosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -67,5 +82,6 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource HistoricoServicosBindingSource;
+        private MetroFramework.Controls.MetroButton metroButton2;
     }
 }

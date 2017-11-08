@@ -44,6 +44,7 @@
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.nomeToolStripTextBox = new MetroFramework.Controls.MetroTextBox();
             this.get_historico_servicosTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.get_historico_servicosTableAdapter();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gethistoricoservicosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -103,6 +104,7 @@
             this.dgvHistorico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHistorico.Size = new System.Drawing.Size(720, 332);
             this.dgvHistorico.TabIndex = 0;
+            this.dgvHistorico.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorico_CellContentClick);
             // 
             // idservicosDataGridViewTextBoxColumn
             // 
@@ -202,11 +204,23 @@
             // 
             this.get_historico_servicosTableAdapter.ClearBeforeFill = true;
             // 
+            // metroButton2
+            // 
+            this.metroButton2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.metroButton2.Location = new System.Drawing.Point(344, 449);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.TabIndex = 17;
+            this.metroButton2.Text = "Voltar";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            // 
             // Historico_Servico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 504);
+            this.ClientSize = new System.Drawing.Size(763, 482);
+            this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.nomeToolStripTextBox);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.dgvHistorico);
@@ -233,5 +247,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn observacaoDataGridViewTextBoxColumn;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroTextBox nomeToolStripTextBox;
+        private MetroFramework.Controls.MetroButton metroButton2;
     }
 }

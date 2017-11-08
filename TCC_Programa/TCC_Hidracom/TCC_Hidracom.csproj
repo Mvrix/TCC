@@ -366,6 +366,7 @@
     <EmbeddedResource Include="Views\Historico_Servico.resx">
       <DependentUpon>Historico_Servico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Report3.rdlc" />
     <EmbeddedResource Include="Views\ReportHistorico.resx">
       <DependentUpon>ReportHistorico.cs</DependentUpon>
     </EmbeddedResource>

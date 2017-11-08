@@ -2,6 +2,7 @@
 using MetroFramework.Forms;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows;
 
 namespace TCC_Hidracom.Views
 {
@@ -78,6 +79,17 @@ namespace TCC_Hidracom.Views
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            System.Windows.Application.Current.MainWindow.Visibility = Visibility.Visible;
+            Close();
+        }
+
+        private void dgvHistorico_CellContentClick(object sender, System.Windows.Forms.DataGridViewCellEventArgs e)
+        {
 
         }
     }
