@@ -8,10 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Input;
+using MetroFramework.Forms;
+using MetroFramework;
+using System.Windows;
 
 namespace TCC_Hidracom.Views
 {
-    public partial class ReportHistorico : Form
+    public partial class ReportHistorico : MetroForm
     {
         public ReportHistorico(List<HistoricoServicos> dataSource)
         {
@@ -28,6 +31,22 @@ namespace TCC_Hidracom.Views
 
             Mouse.OverrideCursor = null;
 
+        }
+
+        private void ReportHistorico_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            System.Windows.Application.Current.MainWindow.Visibility = Visibility.Visible;
+            Close();
         }
     }
 }

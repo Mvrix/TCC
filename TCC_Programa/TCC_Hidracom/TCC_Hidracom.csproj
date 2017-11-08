@@ -179,11 +179,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="db_01359_14_A_1_2015DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>db_01359_14_A_1_2015DataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Expression\ExpressionHelpers.cs" />
     <Compile Include="Extensions\ExtensionsMethods.cs" />
     <Compile Include="IoC\IoC.cs" />
@@ -223,6 +218,18 @@
     </Compile>
     <Compile Include="Views\HistoricoOs .xaml.cs">
       <DependentUpon>HistoricoOs .xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PsqCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PsqCliente.Designer.cs">
+      <DependentUpon>PsqCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PsqFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PsqFuncionario.Designer.cs">
+      <DependentUpon>PsqFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ReportHistorico.cs">
       <SubType>Form</SubType>
@@ -264,12 +271,6 @@
     </Compile>
     <Compile Include="Views\Services.Designer.cs">
       <DependentUpon>Services.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Visualizar\PesquisaCli.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Visualizar\PesquisaCli.Designer.cs">
-      <DependentUpon>PesquisaCli.cs</DependentUpon>
     </Compile>
     <Page Include="Style\Colors.xaml">
       <SubType>Designer</SubType>
@@ -366,6 +367,13 @@
     <EmbeddedResource Include="Views\Historico_Servico.resx">
       <DependentUpon>Historico_Servico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\PsqCliente.resx">
+      <DependentUpon>PsqCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PsqFuncionario.resx">
+      <DependentUpon>PsqFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Report3.rdlc" />
     <EmbeddedResource Include="Views\ReportHistorico.resx">
       <DependentUpon>ReportHistorico.cs</DependentUpon>
     </EmbeddedResource>
@@ -374,9 +382,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Services.resx">
       <DependentUpon>Services.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Visualizar\PesquisaCli.resx">
-      <DependentUpon>PesquisaCli.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="DataSet1.xsc">
@@ -391,17 +396,6 @@
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <Fakes Include="Fakes\System.Windows.fakes" />
-    <None Include="db_01359_14_A_1_2015DataSet.xsc">
-      <DependentUpon>db_01359_14_A_1_2015DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="db_01359_14_A_1_2015DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>db_01359_14_A_1_2015DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="db_01359_14_A_1_2015DataSet.xss">
-      <DependentUpon>db_01359_14_A_1_2015DataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -465,6 +459,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_search_678138.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\active-search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.1.29.4\build\dotnet\Fody.targets" Condition="Exists('..\packages\Fody.1.29.4\build\dotnet\Fody.targets')" />

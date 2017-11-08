@@ -33,6 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvHistorico = new MetroFramework.Controls.MetroGrid();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.NomeBox = new MetroFramework.Controls.MetroTextBox();
             this.idservicosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nometecnicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,8 +43,6 @@
             this.observacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gethistoricoservicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new TCC_Hidracom.DataSet1();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.nomeToolStripTextBox = new MetroFramework.Controls.MetroTextBox();
             this.get_historico_servicosTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.get_historico_servicosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gethistoricoservicosBindingSource)).BeginInit();
@@ -101,15 +101,63 @@
             this.dgvHistorico.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHistorico.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvHistorico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorico.Size = new System.Drawing.Size(720, 332);
+            this.dgvHistorico.Size = new System.Drawing.Size(849, 332);
             this.dgvHistorico.TabIndex = 0;
+            this.dgvHistorico.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorico_CellContentClick);
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.metroButton2.Location = new System.Drawing.Point(410, 449);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.TabIndex = 17;
+            this.metroButton2.Text = "Voltar";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            // 
+            // NomeBox
+            // 
+            // 
+            // 
+            // 
+            this.NomeBox.CustomButton.BackgroundImage = global::TCC_Hidracom.Properties.Resources.active_search;
+            this.NomeBox.CustomButton.Image = null;
+            this.NomeBox.CustomButton.Location = new System.Drawing.Point(231, 1);
+            this.NomeBox.CustomButton.Name = "";
+            this.NomeBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.NomeBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.NomeBox.CustomButton.TabIndex = 1;
+            this.NomeBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.NomeBox.CustomButton.UseSelectable = true;
+            this.NomeBox.CustomButton.Visible = false;
+            this.NomeBox.Lines = new string[0];
+            this.NomeBox.Location = new System.Drawing.Point(23, 80);
+            this.NomeBox.MaxLength = 32767;
+            this.NomeBox.Name = "NomeBox";
+            this.NomeBox.PasswordChar = '\0';
+            this.NomeBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.NomeBox.SelectedText = "";
+            this.NomeBox.SelectionLength = 0;
+            this.NomeBox.SelectionStart = 0;
+            this.NomeBox.ShortcutsEnabled = true;
+            this.NomeBox.Size = new System.Drawing.Size(253, 23);
+            this.NomeBox.TabIndex = 2;
+            this.NomeBox.UseSelectable = true;
+            this.NomeBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.NomeBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.NomeBox.TextChanged += new System.EventHandler(this.metroButton1_Click);
+            this.NomeBox.Click += new System.EventHandler(this.metroTextBox1_Click);
             // 
             // idservicosDataGridViewTextBoxColumn
             // 
+            this.idservicosDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.idservicosDataGridViewTextBoxColumn.DataPropertyName = "id_servicos";
+            this.idservicosDataGridViewTextBoxColumn.FillWeight = 30F;
             this.idservicosDataGridViewTextBoxColumn.HeaderText = "Código";
             this.idservicosDataGridViewTextBoxColumn.Name = "idservicosDataGridViewTextBoxColumn";
             this.idservicosDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idservicosDataGridViewTextBoxColumn.Width = 68;
             // 
             // nometecnicoDataGridViewTextBoxColumn
             // 
@@ -127,25 +175,29 @@
             // 
             // nomeservicoDataGridViewTextBoxColumn
             // 
+            this.nomeservicoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.nomeservicoDataGridViewTextBoxColumn.DataPropertyName = "nome_servico";
             this.nomeservicoDataGridViewTextBoxColumn.HeaderText = "Serviço";
             this.nomeservicoDataGridViewTextBoxColumn.Name = "nomeservicoDataGridViewTextBoxColumn";
             this.nomeservicoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomeservicoDataGridViewTextBoxColumn.Width = 66;
             // 
             // datamarcadaDataGridViewTextBoxColumn
             // 
             this.datamarcadaDataGridViewTextBoxColumn.DataPropertyName = "data_marcada";
+            this.datamarcadaDataGridViewTextBoxColumn.FillWeight = 70F;
             this.datamarcadaDataGridViewTextBoxColumn.HeaderText = "Data Marcada";
             this.datamarcadaDataGridViewTextBoxColumn.Name = "datamarcadaDataGridViewTextBoxColumn";
             this.datamarcadaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // observacaoDataGridViewTextBoxColumn
             // 
+            this.observacaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.observacaoDataGridViewTextBoxColumn.DataPropertyName = "observacao";
+            this.observacaoDataGridViewTextBoxColumn.FillWeight = 300F;
             this.observacaoDataGridViewTextBoxColumn.HeaderText = "Observação";
             this.observacaoDataGridViewTextBoxColumn.Name = "observacaoDataGridViewTextBoxColumn";
             this.observacaoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.observacaoDataGridViewTextBoxColumn.Width = 175;
             // 
             // gethistoricoservicosBindingSource
             // 
@@ -157,47 +209,6 @@
             this.dataSet1.DataSetName = "DataSet1";
             this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(23, 80);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(105, 23);
-            this.metroButton1.TabIndex = 1;
-            this.metroButton1.Text = "Pesquisar";
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click_1);
-            // 
-            // nomeToolStripTextBox
-            // 
-            // 
-            // 
-            // 
-            this.nomeToolStripTextBox.CustomButton.Image = null;
-            this.nomeToolStripTextBox.CustomButton.Location = new System.Drawing.Point(94, 1);
-            this.nomeToolStripTextBox.CustomButton.Name = "";
-            this.nomeToolStripTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.nomeToolStripTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.nomeToolStripTextBox.CustomButton.TabIndex = 1;
-            this.nomeToolStripTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.nomeToolStripTextBox.CustomButton.UseSelectable = true;
-            this.nomeToolStripTextBox.CustomButton.Visible = false;
-            this.nomeToolStripTextBox.Lines = new string[0];
-            this.nomeToolStripTextBox.Location = new System.Drawing.Point(160, 80);
-            this.nomeToolStripTextBox.MaxLength = 32767;
-            this.nomeToolStripTextBox.Name = "nomeToolStripTextBox";
-            this.nomeToolStripTextBox.PasswordChar = '\0';
-            this.nomeToolStripTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.nomeToolStripTextBox.SelectedText = "";
-            this.nomeToolStripTextBox.SelectionLength = 0;
-            this.nomeToolStripTextBox.SelectionStart = 0;
-            this.nomeToolStripTextBox.ShortcutsEnabled = true;
-            this.nomeToolStripTextBox.Size = new System.Drawing.Size(116, 23);
-            this.nomeToolStripTextBox.TabIndex = 2;
-            this.nomeToolStripTextBox.UseSelectable = true;
-            this.nomeToolStripTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.nomeToolStripTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.nomeToolStripTextBox.Click += new System.EventHandler(this.metroTextBox1_Click);
-            // 
             // get_historico_servicosTableAdapter
             // 
             this.get_historico_servicosTableAdapter.ClearBeforeFill = true;
@@ -206,9 +217,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 504);
-            this.Controls.Add(this.nomeToolStripTextBox);
-            this.Controls.Add(this.metroButton1);
+            this.ClientSize = new System.Drawing.Size(895, 482);
+            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.NomeBox);
             this.Controls.Add(this.dgvHistorico);
             this.Name = "Historico_Servico";
             this.Text = "Histórico de Serviço";
@@ -225,13 +236,13 @@
         private MetroFramework.Controls.MetroGrid dgvHistorico;
         private System.Windows.Forms.BindingSource gethistoricoservicosBindingSource;
         private DataSet1TableAdapters.get_historico_servicosTableAdapter get_historico_servicosTableAdapter;
+        private MetroFramework.Controls.MetroButton metroButton2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idservicosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nometecnicoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeclienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeservicoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datamarcadaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn observacaoDataGridViewTextBoxColumn;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroTextBox nomeToolStripTextBox;
+        private MetroFramework.Controls.MetroTextBox NomeBox;
     }
 }

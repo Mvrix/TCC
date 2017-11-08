@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataMarcada = new System.Windows.Forms.DateTimePicker();
             this.produtoBox = new MetroFramework.Controls.MetroComboBox();
             this.tccprodutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new TCC_Hidracom.DataSet1();
@@ -59,6 +58,7 @@
             this.tcc_pessoasTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.tcc_pessoasTableAdapter();
             this.tcc_observacao_servicosTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.tcc_observacao_servicosTableAdapter();
             this.tcc_produtoTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.tcc_produtoTableAdapter();
+            this.dataMarcada = new MetroFramework.Controls.MetroDateTime();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tccprodutoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -86,13 +86,6 @@
             this.groupBox1.Size = new System.Drawing.Size(879, 166);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
-            // 
-            // dataMarcada
-            // 
-            this.dataMarcada.Location = new System.Drawing.Point(87, 122);
-            this.dataMarcada.Name = "dataMarcada";
-            this.dataMarcada.Size = new System.Drawing.Size(314, 20);
-            this.dataMarcada.TabIndex = 12;
             // 
             // produtoBox
             // 
@@ -386,6 +379,14 @@
             // 
             this.tcc_produtoTableAdapter.ClearBeforeFill = true;
             // 
+            // dataMarcada
+            // 
+            this.dataMarcada.Location = new System.Drawing.Point(87, 117);
+            this.dataMarcada.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dataMarcada.Name = "dataMarcada";
+            this.dataMarcada.Size = new System.Drawing.Size(314, 29);
+            this.dataMarcada.TabIndex = 24;
+            // 
             // CadOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -436,10 +437,10 @@
         private System.Windows.Forms.BindingSource tccpessoasBindingSource;
         private System.Windows.Forms.BindingSource tccobservacaoservicosBindingSource;
         private DataSet1TableAdapters.tcc_observacao_servicosTableAdapter tcc_observacao_servicosTableAdapter;
-        private System.Windows.Forms.DateTimePicker dataMarcada;
         private MetroFramework.Controls.MetroComboBox produtoBox;
         private MetroFramework.Controls.MetroLabel pro;
         private System.Windows.Forms.BindingSource tccprodutoBindingSource;
         private DataSet1TableAdapters.tcc_produtoTableAdapter tcc_produtoTableAdapter;
+        private MetroFramework.Controls.MetroDateTime dataMarcada;
     }
 }
