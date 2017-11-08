@@ -461,4 +461,3 @@ C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\Hidracom.pdb
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\TCC_Hidracom.csprojFakesResolveAssemblyReference.cache
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\TCC_Hidracom.Views.SaidaFuncionario.resources
-C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\TCC_Hidracom.csprojResolveAssemblyReference.cache

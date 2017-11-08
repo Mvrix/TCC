@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("red.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icone.ico")]
 
 

@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BtnBscTec = new System.Windows.Forms.Button();
             this.tecnicoss = new MetroFramework.Controls.MetroComboBox();
+            this.tccservicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new TCC_Hidracom.DataSet1();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroUserControl1 = new MetroFramework.Controls.MetroUserControl();
             this.dataMarcada = new System.Windows.Forms.DateTimePicker();
@@ -39,14 +43,20 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.metroUserControl2 = new MetroFramework.Controls.MetroUserControl();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.metroUserControl3 = new MetroFramework.Controls.MetroUserControl();
             this.button2 = new System.Windows.Forms.Button();
             this.servicoss = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroUserControl3 = new MetroFramework.Controls.MetroUserControl();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.tcc_servicosTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.tcc_servicosTableAdapter();
+            this.tccservicosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tccservicosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tccservicosBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -69,10 +79,10 @@
             this.BtnBscTec.TabIndex = 16;
             this.BtnBscTec.Text = "Busca por Tecnico";
             this.BtnBscTec.UseVisualStyleBackColor = true;
+            this.BtnBscTec.Click += new System.EventHandler(this.BtnBscTec_Click);
             // 
             // tecnicoss
             // 
-            this.tecnicoss.DisplayMember = "nome";
             this.tecnicoss.FormattingEnabled = true;
             this.tecnicoss.ItemHeight = 23;
             this.tecnicoss.Location = new System.Drawing.Point(87, 20);
@@ -80,7 +90,21 @@
             this.tecnicoss.Size = new System.Drawing.Size(314, 29);
             this.tecnicoss.TabIndex = 15;
             this.tecnicoss.UseSelectable = true;
-            this.tecnicoss.ValueMember = "id_pessoa";
+            // 
+            // tccservicosBindingSource
+            // 
+            this.tccservicosBindingSource.DataMember = "tcc_servicos";
+            this.tccservicosBindingSource.DataSource = this.dataSet1BindingSource;
+            // 
+            // dataSet1BindingSource
+            // 
+            this.dataSet1BindingSource.DataSource = this.dataSet1;
+            this.dataSet1BindingSource.Position = 0;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // metroLabel1
             // 
@@ -156,14 +180,6 @@
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
             // 
-            // metroUserControl3
-            // 
-            this.metroUserControl3.Location = new System.Drawing.Point(166, 24);
-            this.metroUserControl3.Name = "metroUserControl3";
-            this.metroUserControl3.Size = new System.Drawing.Size(8, 8);
-            this.metroUserControl3.TabIndex = 11;
-            this.metroUserControl3.UseSelectable = true;
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(156, 54);
@@ -172,10 +188,10 @@
             this.button2.TabIndex = 23;
             this.button2.Text = "Busca por Servico";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // servicoss
             // 
-            this.servicoss.DisplayMember = "nome_servico";
             this.servicoss.FormattingEnabled = true;
             this.servicoss.ItemHeight = 23;
             this.servicoss.Location = new System.Drawing.Point(95, 19);
@@ -183,7 +199,6 @@
             this.servicoss.Size = new System.Drawing.Size(314, 29);
             this.servicoss.TabIndex = 24;
             this.servicoss.UseSelectable = true;
-            this.servicoss.ValueMember = "id_observacao_servicos";
             // 
             // metroLabel2
             // 
@@ -193,6 +208,14 @@
             this.metroLabel2.Size = new System.Drawing.Size(55, 19);
             this.metroLabel2.TabIndex = 22;
             this.metroLabel2.Text = "Serviço:";
+            // 
+            // metroUserControl3
+            // 
+            this.metroUserControl3.Location = new System.Drawing.Point(166, 24);
+            this.metroUserControl3.Name = "metroUserControl3";
+            this.metroUserControl3.Size = new System.Drawing.Size(8, 8);
+            this.metroUserControl3.TabIndex = 11;
+            this.metroUserControl3.UseSelectable = true;
             // 
             // metroButton2
             // 
@@ -204,6 +227,15 @@
             this.metroButton2.Text = "Voltar";
             this.metroButton2.UseSelectable = true;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            // 
+            // tcc_servicosTableAdapter
+            // 
+            this.tcc_servicosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tccservicosBindingSource1
+            // 
+            this.tccservicosBindingSource1.DataMember = "tcc_servicos";
+            this.tccservicosBindingSource1.DataSource = this.dataSet1BindingSource;
             // 
             // SaidaFuncionario
             // 
@@ -219,10 +251,14 @@
             this.Load += new System.EventHandler(this.SaidaFuncionario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tccservicosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tccservicosBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -245,5 +281,10 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroUserControl metroUserControl3;
         private MetroFramework.Controls.MetroButton metroButton2;
+        private System.Windows.Forms.BindingSource dataSet1BindingSource;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource tccservicosBindingSource;
+        private DataSet1TableAdapters.tcc_servicosTableAdapter tcc_servicosTableAdapter;
+        private System.Windows.Forms.BindingSource tccservicosBindingSource1;
     }
 }
