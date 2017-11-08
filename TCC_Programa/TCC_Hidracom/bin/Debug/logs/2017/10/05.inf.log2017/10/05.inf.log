@@ -1,4 +1,0 @@
-[Start of the Program]
-14:07:30.665 [1] INFO  Databaselist - INSERT INTO tcc_observacao_servicos (nome_servico, observacao) VALUES ('Limpeza de Caixa','limpar')
-14:09:00.163 [1] INFO  Databaselist - INSERT INTO tcc_pessoas (nome, endereco, bairro, cep, telefone, email, rg, cpf, cidade, datanasc, tipo, observacao) VALUES ('Mario','R natal','Wanel','21234545','1532166453','oi_mario@live.com','487949846','65498796846','Sorcaba','05/10/2017','0','Eu nao')
-[End of the Program]

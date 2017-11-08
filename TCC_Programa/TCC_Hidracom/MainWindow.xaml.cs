@@ -6,7 +6,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using TCC_Hidracom.Views;
-using TCC_Hidracom.Views.Visualizar;
+
 
 namespace TCC_Hidracom
 {
@@ -99,27 +99,27 @@ namespace TCC_Hidracom
             {
                 new RadialMenuItem
                 {
-                    Content = new MenuItem("Tipo \n de Serviço", "appbar_service"),
+                    Content = new MenuItem("Tipo \n de Serviço", "appbar_app_plus"),
                     ArrowBackground = Brushes.Transparent
                 },
                 new RadialMenuItem
                 {
-                    Content = new TextBlock { Text = "Cliente" },
+                    Content = new MenuItem ("Cliente", "appbar_user_add"),
                     ArrowBackground = Brushes.Transparent
                 },
                 new RadialMenuItem
                 {
-                    Content = new MenuItem("Ordem \n de Serviço", "appbar_billboard"),
+                    Content = new MenuItem("Ordem \n de Serviço", "appbar_customerservice"),
                     ArrowBackground = Brushes.Transparent
                 },
                 new RadialMenuItem
                 {
-                    Content = new TextBlock { Text = "Funcionário" },
+                    Content = new MenuItem("Funcionário", "appbar_people_checkbox"),
                     ArrowBackground = Brushes.Transparent
                 },
                  new RadialMenuItem
                 {
-                    Content = new TextBlock { Text = "Produto" },
+                    Content = new MenuItem("Produto","appbar_thumb_up_add"),
                     ArrowBackground = Brushes.Transparent
                 },
                 new RadialMenuItem()
@@ -146,6 +146,7 @@ namespace TCC_Hidracom
                 await Task.Delay(400);
                 new CadOS().Show();
             };
+           
             submenu[3].Click += async (sender, args) =>
             {
                 this.Visibility = Visibility.Hidden;
@@ -154,19 +155,19 @@ namespace TCC_Hidracom
             };
             submenu[4].Click += async (sender, args) =>
             {
-                MyRadialMenu.IsOpen = false;
-                await Task.Delay(400);
-                MyRadialMenu.Items = Menu;
-                MyRadialMenu.IsOpen = true;
-            };
-            submenu[4].Click += async (sender, args) =>
-            {
                 this.Visibility = Visibility.Hidden;
                 await Task.Delay(400);
                 new Produto().Show();
             };
 
-                return submenu;
+            submenu[5].Click += async (sender, args) =>
+            {
+                MyRadialMenu.IsOpen = false;
+                await Task.Delay(400);
+                MyRadialMenu.Items = Menu;
+                MyRadialMenu.IsOpen = true;
+            };
+            return submenu;
         }
 
         /// <summary>
@@ -179,23 +180,23 @@ namespace TCC_Hidracom
             {
                 new RadialMenuItem
                 {
-                    Content = new TextBlock { Text = "Historico O.S" },
+                    Content = new MenuItem("Historico O.S","appbar_table_select"),
                     ArrowBackground = Brushes.Transparent
                 },
              
                 new RadialMenuItem
                 {
-                    Content = new TextBlock { Text = "Serviço por Técnico" },
+                    Content = new MenuItem("Serviço por Técnico", "appbar_tools"),
                     ArrowBackground = Brushes.Transparent
                 },
                 new RadialMenuItem
                 {
-                    Content = new TextBlock { Text = "Pesquisar Clientes" },
+                    Content = new MenuItem("Pesquisar Clientes","appbar_people_checkbox"),
                     ArrowBackground = Brushes.Transparent
                 },
                 new RadialMenuItem
                 {
-                    Content = new TextBlock { Text = "Pesquisar Funcionários" },
+                    Content = new MenuItem ("Pesquisar \n Funcionários", "appbar_page_search"),
                     ArrowBackground = Brushes.Transparent
                 },
                 new RadialMenuItem
@@ -215,14 +216,14 @@ namespace TCC_Hidracom
             {
                 this.Visibility = Visibility.Hidden;
                 await Task.Delay(400);
-                new PesquisaCli().Show();
+                new PsqCliente().Show();
             };
 
             submenu[3].Click += async (sender, args) =>
             {
                 this.Visibility = Visibility.Hidden;
                 await Task.Delay(400);
-              //  new ViewPessoa(1).Show();
+                new PsqFuncionario().Show();
                
             };
             submenu[4].Click += async (sender, args) =>
@@ -247,12 +248,12 @@ namespace TCC_Hidracom
             {
                 new RadialMenuItem
                 {
-                    Content = new TextBlock { Text = "Histórico de Serviço" },
+                    Content = new MenuItem("Histórico \n de Serviço", "appbar_list_check"),
                     ArrowBackground = Brushes.Transparent
                 },
                 new RadialMenuItem
                 {
-                    Content = new TextBlock { Text = "Saída do Funcionário" },
+                    Content = new MenuItem("Saída do Funcionário", "appbar_arrow_down_up"),
                     ArrowBackground = Brushes.Transparent
                 },            
                 new RadialMenuItem
@@ -270,8 +271,8 @@ namespace TCC_Hidracom
             {
                 MyRadialMenu.IsOpen = false;
                 await Task.Delay(400);
-                //Abre algo
-                // ();
+                await Task.Delay(400);
+                new SaidaFuncionario().Show();
             };
            
             submenu[2].Click += async (sender, args) =>

@@ -1,7 +1,0 @@
-[Start of the Program]
-15:43:58.601 [9] INFO  Databaselist - INSERT INTO tcc_observacao_servicos (nome_servico, observacao) VALUES ('isaque','ele da mto o Dacu')
-15:45:31.555 [9] INFO  Databaselist - INSERT INTO tcc_pessoas (nome, endereco, bairro, cep, telefone, email, rg, cpf, cidade, datanasc, tipo, observacao) VALUES ('isaque','R antonio Piantore','Jd sao Guilherme','11111111','1544444444','isaque.chaves@outlook.com','545456465','54564564564','Sorocaba','03/10/2017','0','Cuidado sujeito retardado')
-15:46:20.429 [9] INFO  Databaselist - INSERT INTO tcc_pessoas (nome, endereco, bairro, cep, telefone, email, rg, cpf, cidade, datanasc, tipo, observacao) VALUES ('Isaque','r antonasflsa','kjskjsalkjflksajflksa','44465456','4456456464','isaque@jsalkfjsalk.com','854645645','54564564564','Soroajsfkçlsa','03/10/2017','1','maskfjsalkfjsa')
-15:46:31.232 [9] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '1'
-15:47:19.377 [9] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '1'
-15:47:29.911 [9] INFO  Databaselist - SELECT * FROM tcc_pessoas WHERE tipo = '0'
