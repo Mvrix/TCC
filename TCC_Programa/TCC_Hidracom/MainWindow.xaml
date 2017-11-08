@@ -60,7 +60,7 @@
             <RadialMenu:RadialMenu x:Name="MyRadialMenu" Background="White">
                 <RadialMenu:RadialMenu.CentralItem>
                     <RadialMenu:RadialMenuCentralItem Click="RadialMenuCentralItem_Click">
-                        <TextBlock>Close</TextBlock>
+                        <TextBlock>Minimizar</TextBlock>
                     </RadialMenu:RadialMenuCentralItem>
                 </RadialMenu:RadialMenu.CentralItem>
             </RadialMenu:RadialMenu>
