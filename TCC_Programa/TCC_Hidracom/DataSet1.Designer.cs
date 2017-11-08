@@ -34,11 +34,11 @@ namespace TCC_Hidracom {
         
         private tcc_observacao_servicosDataTable tabletcc_observacao_servicos;
         
-        private global::System.Data.DataRelation relationFK__tcc_servi__pesso__5535A963;
+        private global::System.Data.DataRelation relationFK__tcc_servi__obser__5441852A;
         
         private global::System.Data.DataRelation relationFK__tcc_servi__tecni__5629CD9C;
         
-        private global::System.Data.DataRelation relationFK__tcc_servi__obser__5441852A;
+        private global::System.Data.DataRelation relationFK__tcc_servi__pesso__5535A963;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -296,9 +296,9 @@ namespace TCC_Hidracom {
                     this.tabletcc_observacao_servicos.InitVars();
                 }
             }
-            this.relationFK__tcc_servi__pesso__5535A963 = this.Relations["FK__tcc_servi__pesso__5535A963"];
-            this.relationFK__tcc_servi__tecni__5629CD9C = this.Relations["FK__tcc_servi__tecni__5629CD9C"];
             this.relationFK__tcc_servi__obser__5441852A = this.Relations["FK__tcc_servi__obser__5441852A"];
+            this.relationFK__tcc_servi__tecni__5629CD9C = this.Relations["FK__tcc_servi__tecni__5629CD9C"];
+            this.relationFK__tcc_servi__pesso__5535A963 = this.Relations["FK__tcc_servi__pesso__5535A963"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -319,18 +319,18 @@ namespace TCC_Hidracom {
             base.Tables.Add(this.tabletcc_servicos);
             this.tabletcc_observacao_servicos = new tcc_observacao_servicosDataTable();
             base.Tables.Add(this.tabletcc_observacao_servicos);
-            this.relationFK__tcc_servi__pesso__5535A963 = new global::System.Data.DataRelation("FK__tcc_servi__pesso__5535A963", new global::System.Data.DataColumn[] {
-                        this.tabletcc_pessoas.id_pessoaColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletcc_servicos.pessoas_idColumn}, false);
-            this.Relations.Add(this.relationFK__tcc_servi__pesso__5535A963);
-            this.relationFK__tcc_servi__tecni__5629CD9C = new global::System.Data.DataRelation("FK__tcc_servi__tecni__5629CD9C", new global::System.Data.DataColumn[] {
-                        this.tabletcc_pessoas.id_pessoaColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletcc_servicos.tecnico_idColumn}, false);
-            this.Relations.Add(this.relationFK__tcc_servi__tecni__5629CD9C);
             this.relationFK__tcc_servi__obser__5441852A = new global::System.Data.DataRelation("FK__tcc_servi__obser__5441852A", new global::System.Data.DataColumn[] {
                         this.tabletcc_observacao_servicos.id_observacao_servicosColumn}, new global::System.Data.DataColumn[] {
                         this.tabletcc_servicos.observacao_servico_idColumn}, false);
             this.Relations.Add(this.relationFK__tcc_servi__obser__5441852A);
+            this.relationFK__tcc_servi__tecni__5629CD9C = new global::System.Data.DataRelation("FK__tcc_servi__tecni__5629CD9C", new global::System.Data.DataColumn[] {
+                        this.tabletcc_pessoas.id_pessoaColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletcc_servicos.tecnico_idColumn}, false);
+            this.Relations.Add(this.relationFK__tcc_servi__tecni__5629CD9C);
+            this.relationFK__tcc_servi__pesso__5535A963 = new global::System.Data.DataRelation("FK__tcc_servi__pesso__5535A963", new global::System.Data.DataColumn[] {
+                        this.tabletcc_pessoas.id_pessoaColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletcc_servicos.pessoas_idColumn}, false);
+            this.Relations.Add(this.relationFK__tcc_servi__pesso__5535A963);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2717,23 +2717,23 @@ namespace TCC_Hidracom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tcc_servicosRow[] Gettcc_servicosRowsByFK__tcc_servi__pesso__5535A963() {
-                if ((this.Table.ChildRelations["FK__tcc_servi__pesso__5535A963"] == null)) {
-                    return new tcc_servicosRow[0];
-                }
-                else {
-                    return ((tcc_servicosRow[])(base.GetChildRows(this.Table.ChildRelations["FK__tcc_servi__pesso__5535A963"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tcc_servicosRow[] Gettcc_servicosRowsByFK__tcc_servi__tecni__5629CD9C() {
                 if ((this.Table.ChildRelations["FK__tcc_servi__tecni__5629CD9C"] == null)) {
                     return new tcc_servicosRow[0];
                 }
                 else {
                     return ((tcc_servicosRow[])(base.GetChildRows(this.Table.ChildRelations["FK__tcc_servi__tecni__5629CD9C"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public tcc_servicosRow[] Gettcc_servicosRowsByFK__tcc_servi__pesso__5535A963() {
+                if ((this.Table.ChildRelations["FK__tcc_servi__pesso__5535A963"] == null)) {
+                    return new tcc_servicosRow[0];
+                }
+                else {
+                    return ((tcc_servicosRow[])(base.GetChildRows(this.Table.ChildRelations["FK__tcc_servi__pesso__5535A963"])));
                 }
             }
         }
@@ -3015,12 +3015,12 @@ namespace TCC_Hidracom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tcc_pessoasRow tcc_pessoasRowByFK__tcc_servi__pesso__5535A963 {
+            public tcc_observacao_servicosRow tcc_observacao_servicosRow {
                 get {
-                    return ((tcc_pessoasRow)(this.GetParentRow(this.Table.ParentRelations["FK__tcc_servi__pesso__5535A963"])));
+                    return ((tcc_observacao_servicosRow)(this.GetParentRow(this.Table.ParentRelations["FK__tcc_servi__obser__5441852A"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__tcc_servi__pesso__5535A963"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__tcc_servi__obser__5441852A"]);
                 }
             }
             
@@ -3037,12 +3037,12 @@ namespace TCC_Hidracom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tcc_observacao_servicosRow tcc_observacao_servicosRow {
+            public tcc_pessoasRow tcc_pessoasRowByFK__tcc_servi__pesso__5535A963 {
                 get {
-                    return ((tcc_observacao_servicosRow)(this.GetParentRow(this.Table.ParentRelations["FK__tcc_servi__obser__5441852A"])));
+                    return ((tcc_pessoasRow)(this.GetParentRow(this.Table.ParentRelations["FK__tcc_servi__pesso__5535A963"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__tcc_servi__obser__5441852A"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__tcc_servi__pesso__5535A963"]);
                 }
             }
             
@@ -3539,19 +3539,28 @@ namespace TCC_Hidracom.DataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "select * from get_historico_servicos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        tc.id_servicos, tc.pessoas_id, tc.tecnico_id, tc.data_marcada, tc.o" +
+            this._commandCollection[1].CommandText = @"SELECT        id_servicos, nome_tecnico, nome_cliente, nome_servico, data_marcada, observacao
+FROM            get_historico_servicos
+WHERE        (nome_tecnico LIKE @pesquisa) OR
+                         (nome_cliente LIKE @pesquisa) OR
+                         (nome_servico LIKE @pesquisa)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pesquisa", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "nome_tecnico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT        tc.id_servicos, tc.pessoas_id, tc.tecnico_id, tc.data_marcada, tc.o" +
                 "bservacao\r\nFROM            tcc_servicos AS tc INNER JOIN\r\n                      " +
                 "   tcc_pessoas AS tp ON tc.pessoas_id = tp.id_pessoa\r\nWHERE        (tp.nome LIKE" +
                 " @nome)";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3582,8 +3591,44 @@ namespace TCC_Hidracom.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int SelectServicos(DataSet1.get_historico_servicosDataTable dataTable, string nome) {
+        public virtual int FillByPesquisa(DataSet1.get_historico_servicosDataTable dataTable, string pesquisa) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((pesquisa == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(pesquisa));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSet1.get_historico_servicosDataTable GetDataByPesquisa(string pesquisa) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((pesquisa == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(pesquisa));
+            }
+            DataSet1.get_historico_servicosDataTable dataTable = new DataSet1.get_historico_servicosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int SelectServicos(DataSet1.get_historico_servicosDataTable dataTable, string nome) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((nome == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -3602,7 +3647,7 @@ namespace TCC_Hidracom.DataSet1TableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual DataSet1.get_historico_servicosDataTable GetDataBy(string nome) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((nome == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }

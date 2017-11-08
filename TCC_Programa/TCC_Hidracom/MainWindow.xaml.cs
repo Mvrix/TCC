@@ -149,13 +149,23 @@ namespace TCC_Hidracom
            
             submenu[3].Click += async (sender, args) =>
             {
-               
+                this.Visibility = Visibility.Hidden;
+                await Task.Delay(400);
+                new CadCliente(1).Show();
             };
             submenu[4].Click += async (sender, args) =>
             {
                 this.Visibility = Visibility.Hidden;
                 await Task.Delay(400);
                 new Produto().Show();
+            };
+
+            submenu[5].Click += async (sender, args) =>
+            {
+                MyRadialMenu.IsOpen = false;
+                await Task.Delay(400);
+                MyRadialMenu.Items = Menu;
+                MyRadialMenu.IsOpen = true;
             };
             return submenu;
         }
@@ -170,23 +180,23 @@ namespace TCC_Hidracom
             {
                 new RadialMenuItem
                 {
-                    Content = new TextBlock { Text = "Historico O.S" },
+                    Content = new MenuItem("Historico O.S","appbar_table_select"),
                     ArrowBackground = Brushes.Transparent
                 },
              
                 new RadialMenuItem
                 {
-                    Content = new TextBlock { Text = "Serviço por Técnico" },
+                    Content = new MenuItem("Serviço por Técnico", "appbar_tools"),
                     ArrowBackground = Brushes.Transparent
                 },
                 new RadialMenuItem
                 {
-                    Content = new TextBlock { Text = "Pesquisar Clientes" },
+                    Content = new MenuItem("Pesquisar Clientes","appbar_people_checkbox"),
                     ArrowBackground = Brushes.Transparent
                 },
                 new RadialMenuItem
                 {
-                    Content = new TextBlock { Text = "Pesquisar Funcionários" },
+                    Content = new MenuItem ("Pesquisar \n Funcionários", "appbar_page_search"),
                     ArrowBackground = Brushes.Transparent
                 },
                 new RadialMenuItem
