@@ -12,7 +12,7 @@
 
     <Grid>
         <tb:TaskbarIcon  x:Name="MyNotifyIcon"
-                        IconSource="pack://application:,,,/Red.ico"
+                        IconSource="pack://application:,,,/icone.ico"
                         ToolTipText="                                                                                                                                                                                       Clique com o botão direito!"
                          HorizontalAlignment="Center"
                          >
@@ -25,7 +25,7 @@
                         <MenuItem.Icon>
                             <Image Width="16"
                                    Height="16"
-                                   Source="pack://application:,,,/Red.ico" />
+                                   Source="pack://application:,,,/icone.ico" />
                         </MenuItem.Icon>
                     </MenuItem>
 
@@ -35,7 +35,7 @@
                         <MenuItem.Icon>
                             <Image Width="16"
                                    Height="16"
-                                   Source="pack://application:,,,/Red.ico" />
+                                   Source="pack://application:,,,/icone.ico" />
                         </MenuItem.Icon>
                     </MenuItem>
 
@@ -47,7 +47,7 @@
                         <MenuItem.Icon>
                             <Image Width="16"
                                    Height="16"
-                                   Source="pack://application:,,,/Red.ico" />
+                                   Source="pack://application:,,,/icone.ico" />
                         </MenuItem.Icon>
                     </MenuItem>
 

@@ -144,18 +144,18 @@ namespace TCC_Hidracom.Views
 
         }
 
-        private void fillByFuncionario1ToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.tcc_pessoasTableAdapter.FillByFuncionario1(this.dataSet1.tcc_pessoas);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+        //private void fillByFuncionario1ToolStripButton_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        this.tcc_pessoasTableAdapter.FillByFuncionario1(this.dataSet1.tcc_pessoas);
+        //    } 
+        //    catch (System.Exception ex)
+        //    {
+        //        System.Windows.Forms.MessageBox.Show(ex.Message);
+        //    }
 
-        }
+        //}
 
         private void fillByFuncionarioToolStripButton_Click_1(object sender, EventArgs e)
         {

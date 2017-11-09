@@ -6,7 +6,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using TCC_Hidracom.Views;
-using TCC_Hidracom.Views.Visualizar;
+
 
 namespace TCC_Hidracom
 {
@@ -184,12 +184,7 @@ namespace TCC_Hidracom
                     ArrowBackground = Brushes.Transparent
                 },
              
-                new RadialMenuItem
-                {
-                    Content = new MenuItem("Serviço por Técnico", "appbar_tools"),
-                    ArrowBackground = Brushes.Transparent
-                },
-                new RadialMenuItem
+                new RadialMenuItem                          
                 {
                     Content = new MenuItem("Pesquisar Clientes","appbar_people_checkbox"),
                     ArrowBackground = Brushes.Transparent
@@ -212,21 +207,21 @@ namespace TCC_Hidracom
                 new Historico_Servico().Show();
             };
 
+            submenu[1].Click += async (sender, args) =>
+            {
+                this.Visibility = Visibility.Hidden;
+                await Task.Delay(400);
+                new PsqCliente().Show();
+            };
+
             submenu[2].Click += async (sender, args) =>
             {
                 this.Visibility = Visibility.Hidden;
                 await Task.Delay(400);
-                new PesquisaCli().Show();
-            };
-
-            submenu[3].Click += async (sender, args) =>
-            {
-                this.Visibility = Visibility.Hidden;
-                await Task.Delay(400);
-              //  new ViewPessoa(1).Show();
+                new PsqFuncionario().Show();
                
             };
-            submenu[4].Click += async (sender, args) =>
+            submenu[3].Click += async (sender, args) =>
             {
                 MyRadialMenu.IsOpen = false;
                 await Task.Delay(400);
@@ -255,7 +250,12 @@ namespace TCC_Hidracom
                 {
                     Content = new MenuItem("Saída do Funcionário", "appbar_arrow_down_up"),
                     ArrowBackground = Brushes.Transparent
-                },            
+                },
+                   new RadialMenuItem
+                {
+                    Content = new MenuItem("Serviço \n por cliente", "appbar_arrow_down_up"),
+                    ArrowBackground = Brushes.Transparent
+                },
                 new RadialMenuItem
                 {
                     Content = new TextBlock { Text = "Voltar" }
@@ -270,17 +270,22 @@ namespace TCC_Hidracom
             submenu[1].Click += async (sender, args) =>
             {
                 MyRadialMenu.IsOpen = false;
-                await Task.Delay(400);
-                await Task.Delay(400);
+                await Task.Delay(400);             
                 new SaidaFuncionario().Show();
             };
            
-            submenu[2].Click += async (sender, args) =>
+            submenu[3].Click += async (sender, args) =>
             {
                 MyRadialMenu.IsOpen = false;
                 await Task.Delay(400);
                 MyRadialMenu.Items = Menu;
                 MyRadialMenu.IsOpen = true;
+            };
+            submenu[2].Click += async (sender, args) =>
+            {
+                MyRadialMenu.IsOpen = false;
+                await Task.Delay(400);
+                new relatorioCliente().Show();              
             };
 
             return submenu;

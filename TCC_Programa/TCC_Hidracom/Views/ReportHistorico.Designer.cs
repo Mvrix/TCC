@@ -30,11 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportHistorico));
+            this.HistoricoServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.HistoricoServicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.HistoricoServicosBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // HistoricoServicosBindingSource
+            // 
+            this.HistoricoServicosBindingSource.DataSource = typeof(TCC_Hidracom.HistoricoServicos);
             // 
             // reportViewer1
             // 
@@ -59,10 +64,6 @@
             this.metroButton2.UseSelectable = true;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
-            // HistoricoServicosBindingSource
-            // 
-            this.HistoricoServicosBindingSource.DataSource = typeof(TCC_Hidracom.HistoricoServicos);
-            // 
             // ReportHistorico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -70,6 +71,7 @@
             this.ClientSize = new System.Drawing.Size(754, 431);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReportHistorico";
             this.Text = "Relatório de O.S";
             this.Load += new System.EventHandler(this.ReportHistorico_Load);

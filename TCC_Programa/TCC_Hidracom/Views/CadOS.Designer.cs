@@ -32,8 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadOS));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataMarcada = new System.Windows.Forms.DateTimePicker();
+            this.dataMarcada = new MetroFramework.Controls.MetroDateTime();
             this.produtoBox = new MetroFramework.Controls.MetroComboBox();
             this.tccprodutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new TCC_Hidracom.DataSet1();
@@ -89,10 +90,11 @@
             // 
             // dataMarcada
             // 
-            this.dataMarcada.Location = new System.Drawing.Point(87, 122);
+            this.dataMarcada.Location = new System.Drawing.Point(87, 117);
+            this.dataMarcada.MinimumSize = new System.Drawing.Size(0, 29);
             this.dataMarcada.Name = "dataMarcada";
-            this.dataMarcada.Size = new System.Drawing.Size(314, 20);
-            this.dataMarcada.TabIndex = 12;
+            this.dataMarcada.Size = new System.Drawing.Size(314, 29);
+            this.dataMarcada.TabIndex = 24;
             // 
             // produtoBox
             // 
@@ -395,6 +397,7 @@
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CadOS";
@@ -436,10 +439,10 @@
         private System.Windows.Forms.BindingSource tccpessoasBindingSource;
         private System.Windows.Forms.BindingSource tccobservacaoservicosBindingSource;
         private DataSet1TableAdapters.tcc_observacao_servicosTableAdapter tcc_observacao_servicosTableAdapter;
-        private System.Windows.Forms.DateTimePicker dataMarcada;
         private MetroFramework.Controls.MetroComboBox produtoBox;
         private MetroFramework.Controls.MetroLabel pro;
         private System.Windows.Forms.BindingSource tccprodutoBindingSource;
         private DataSet1TableAdapters.tcc_produtoTableAdapter tcc_produtoTableAdapter;
+        private MetroFramework.Controls.MetroDateTime dataMarcada;
     }
 }

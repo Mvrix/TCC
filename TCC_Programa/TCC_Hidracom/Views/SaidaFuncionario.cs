@@ -20,32 +20,11 @@ namespace TCC_Hidracom.Views
         {
             InitializeComponent();
             PreencherFuncionario();
-            //PreencherCliente();
             PreencherServico();
         }
-
-        private void SaidaFuncionario_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'dataSet1.tcc_servicos' table. You can move, or remove it, as needed.
-            this.tcc_servicosTableAdapter.Fill(this.dataSet1.tcc_servicos);
-
-        }
-
-        private void metroButton2_Click(object sender, EventArgs e)
-        {
-            System.Windows.Application.Current.MainWindow.Visibility = Visibility.Visible;
-            Close();
-        }
-
-        private void BtnBscTec_Click(object sender, EventArgs e)
-        {
-            var data = new HistoricoServicos().Load(string.Format(Selects.SELECT_HISTORICO_BY_TECNICO_ID, tecnicoss.SelectedValue));
-            new ReportHistorico(data).Show();
-
-        }
-
-        //new ReportHistorico(new HistoricoServicos().Load(string.Format(Selects.SELECT_HISTORICO_BY_PESSOA_ID, tecnicoss.SelectedValue)));
-
+        /// <summary>
+        /// Método para chamar da tabela tcc_pessoas o nome do Funcionario e preencher no comboBox
+        /// </summary>
         public void PreencherFuncionario()
         {
             using (var conn = new SqlConnection(Properties.Settings.Default.db_01359_14_A_1_2015ConnectionString))
@@ -68,30 +47,9 @@ namespace TCC_Hidracom.Views
                 }
             }
         }
-
-        public void PreencherCliente()
-        {
-            using (var conn = new SqlConnection(Properties.Settings.Default.db_01359_14_A_1_2015ConnectionString))
-            {
-                conn.Open();
-                using (var sc = new SqlCommand("SELECT * FROM tcc_pessoas where tipo = 0", conn))
-                {
-                    SqlDataReader reader;
-
-                    reader = sc.ExecuteReader();
-                    DataTable dt = new DataTable();
-
-                    dt.Columns.Add("id_pessoa", typeof(string));
-                    dt.Columns.Add("nome", typeof(string));
-
-                    dt.Load(reader);
-                    tecnicoss.ValueMember = "id_pessoa";
-                    tecnicoss.DisplayMember = "nome";
-                    tecnicoss.DataSource = dt;
-                }
-            }
-        }
-
+        /// <summary>
+        ///  Método para chamar da tabela tcc_serviço o nome do serviço e preencher no comboBox
+        /// </summary>
         public void PreencherServico()
         {
             using (var conn = new SqlConnection(Properties.Settings.Default.db_01359_14_A_1_2015ConnectionString))
@@ -114,11 +72,32 @@ namespace TCC_Hidracom.Views
                 }
             }
         }
+        private void SaidaFuncionario_Load(object sender, EventArgs e)
+        {
 
-        private void button2_Click(object sender, EventArgs e)
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            System.Windows.Application.Current.MainWindow.Visibility = Visibility.Visible;
+            Close();
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            var data = new HistoricoServicos().Load(string.Format(Selects.SELECT_HISTORICO_BY_TECNICO_ID, tecnicoss.SelectedValue));
+            new ReportHistorico(data).Show();
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
         {
             var data = new HistoricoServicos().Load(string.Format(Selects.SELECT_HISTORICO_BY_SERVICO_ID, servicoss.SelectedValue));
             new ReportHistorico(data).Show();
         }
+
+        private void tecnicoss_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }              
     }
 }
