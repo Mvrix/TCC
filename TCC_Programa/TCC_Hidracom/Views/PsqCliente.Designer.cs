@@ -35,21 +35,44 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PsqCliente));
             this.NomeBox = new MetroFramework.Controls.MetroTextBox();
             this.dgvHistorico = new MetroFramework.Controls.MetroGrid();
+            this.tccpessoasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new TCC_Hidracom.DataSet1();
+            this.tcc_pessoasTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.tcc_pessoasTableAdapter();
+            this.SalvarBtn = new MetroFramework.Controls.MetroButton();
+            this.CancelarBtn = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.boxNome = new MetroFramework.Controls.MetroTextBox();
+            this.BoxEndereco = new MetroFramework.Controls.MetroTextBox();
+            this.BoxBairro = new MetroFramework.Controls.MetroTextBox();
+            this.boxCep = new MetroFramework.Controls.MetroTextBox();
+            this.BoxTelefone = new MetroFramework.Controls.MetroTextBox();
+            this.BoxEmail = new MetroFramework.Controls.MetroTextBox();
+            this.BoxRg = new MetroFramework.Controls.MetroTextBox();
+            this.BoxCpf = new MetroFramework.Controls.MetroTextBox();
+            this.BoxCidade = new MetroFramework.Controls.MetroTextBox();
+            this.BoxData = new MetroFramework.Controls.MetroTextBox();
             this.idpessoaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cepDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bairroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cepDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datanascDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.observacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tccpessoasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new TCC_Hidracom.DataSet1();
-            this.tcc_pessoasTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.tcc_pessoasTableAdapter();
+            this.VoltarBtn = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tccpessoasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -113,14 +136,14 @@
             this.dgvHistorico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idpessoaDataGridViewTextBoxColumn,
             this.nomeDataGridViewTextBoxColumn,
+            this.cepDataGridViewTextBoxColumn,
             this.enderecoDataGridViewTextBoxColumn,
             this.bairroDataGridViewTextBoxColumn,
-            this.cepDataGridViewTextBoxColumn,
+            this.cidadeDataGridViewTextBoxColumn,
             this.telefoneDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
             this.rgDataGridViewTextBoxColumn,
             this.cpfDataGridViewTextBoxColumn,
-            this.cidadeDataGridViewTextBoxColumn,
             this.datanascDataGridViewTextBoxColumn,
             this.observacaoDataGridViewTextBoxColumn});
             this.dgvHistorico.DataSource = this.tccpessoasBindingSource;
@@ -149,116 +172,9 @@
             this.dgvHistorico.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHistorico.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvHistorico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorico.Size = new System.Drawing.Size(1009, 355);
+            this.dgvHistorico.Size = new System.Drawing.Size(1066, 79);
             this.dgvHistorico.TabIndex = 5;
             this.dgvHistorico.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorico_CellContentClick);
-            // 
-            // idpessoaDataGridViewTextBoxColumn
-            // 
-            this.idpessoaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.idpessoaDataGridViewTextBoxColumn.DataPropertyName = "id_pessoa";
-            this.idpessoaDataGridViewTextBoxColumn.HeaderText = "id_pessoa";
-            this.idpessoaDataGridViewTextBoxColumn.Name = "idpessoaDataGridViewTextBoxColumn";
-            this.idpessoaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idpessoaDataGridViewTextBoxColumn.Width = 81;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomeDataGridViewTextBoxColumn.Width = 59;
-            // 
-            // enderecoDataGridViewTextBoxColumn
-            // 
-            this.enderecoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "endereco";
-            this.enderecoDataGridViewTextBoxColumn.HeaderText = "endereco";
-            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
-            this.enderecoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.enderecoDataGridViewTextBoxColumn.Width = 78;
-            // 
-            // bairroDataGridViewTextBoxColumn
-            // 
-            this.bairroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.bairroDataGridViewTextBoxColumn.DataPropertyName = "bairro";
-            this.bairroDataGridViewTextBoxColumn.HeaderText = "bairro";
-            this.bairroDataGridViewTextBoxColumn.Name = "bairroDataGridViewTextBoxColumn";
-            this.bairroDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bairroDataGridViewTextBoxColumn.Width = 61;
-            // 
-            // cepDataGridViewTextBoxColumn
-            // 
-            this.cepDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.cepDataGridViewTextBoxColumn.DataPropertyName = "cep";
-            this.cepDataGridViewTextBoxColumn.HeaderText = "cep";
-            this.cepDataGridViewTextBoxColumn.Name = "cepDataGridViewTextBoxColumn";
-            this.cepDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cepDataGridViewTextBoxColumn.Width = 48;
-            // 
-            // telefoneDataGridViewTextBoxColumn
-            // 
-            this.telefoneDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.telefoneDataGridViewTextBoxColumn.DataPropertyName = "telefone";
-            this.telefoneDataGridViewTextBoxColumn.HeaderText = "telefone";
-            this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
-            this.telefoneDataGridViewTextBoxColumn.ReadOnly = true;
-            this.telefoneDataGridViewTextBoxColumn.Width = 73;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn.Width = 57;
-            // 
-            // rgDataGridViewTextBoxColumn
-            // 
-            this.rgDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.rgDataGridViewTextBoxColumn.DataPropertyName = "rg";
-            this.rgDataGridViewTextBoxColumn.HeaderText = "rg";
-            this.rgDataGridViewTextBoxColumn.Name = "rgDataGridViewTextBoxColumn";
-            this.rgDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rgDataGridViewTextBoxColumn.Width = 41;
-            // 
-            // cpfDataGridViewTextBoxColumn
-            // 
-            this.cpfDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.cpfDataGridViewTextBoxColumn.DataPropertyName = "cpf";
-            this.cpfDataGridViewTextBoxColumn.HeaderText = "cpf";
-            this.cpfDataGridViewTextBoxColumn.Name = "cpfDataGridViewTextBoxColumn";
-            this.cpfDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cpfDataGridViewTextBoxColumn.Width = 46;
-            // 
-            // cidadeDataGridViewTextBoxColumn
-            // 
-            this.cidadeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.cidadeDataGridViewTextBoxColumn.DataPropertyName = "cidade";
-            this.cidadeDataGridViewTextBoxColumn.HeaderText = "cidade";
-            this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
-            this.cidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cidadeDataGridViewTextBoxColumn.Width = 64;
-            // 
-            // datanascDataGridViewTextBoxColumn
-            // 
-            this.datanascDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.datanascDataGridViewTextBoxColumn.DataPropertyName = "datanasc";
-            this.datanascDataGridViewTextBoxColumn.HeaderText = "datanasc";
-            this.datanascDataGridViewTextBoxColumn.Name = "datanascDataGridViewTextBoxColumn";
-            this.datanascDataGridViewTextBoxColumn.ReadOnly = true;
-            this.datanascDataGridViewTextBoxColumn.Width = 76;
-            // 
-            // observacaoDataGridViewTextBoxColumn
-            // 
-            this.observacaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.observacaoDataGridViewTextBoxColumn.DataPropertyName = "observacao";
-            this.observacaoDataGridViewTextBoxColumn.HeaderText = "observacao";
-            this.observacaoDataGridViewTextBoxColumn.Name = "observacaoDataGridViewTextBoxColumn";
-            this.observacaoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tccpessoasBindingSource
             // 
@@ -274,11 +190,557 @@
             // 
             this.tcc_pessoasTableAdapter.ClearBeforeFill = true;
             // 
+            // SalvarBtn
+            // 
+            this.SalvarBtn.Location = new System.Drawing.Point(556, 411);
+            this.SalvarBtn.Name = "SalvarBtn";
+            this.SalvarBtn.Size = new System.Drawing.Size(75, 23);
+            this.SalvarBtn.TabIndex = 7;
+            this.SalvarBtn.Text = "Salvar";
+            this.SalvarBtn.UseSelectable = true;
+            // 
+            // CancelarBtn
+            // 
+            this.CancelarBtn.Location = new System.Drawing.Point(450, 411);
+            this.CancelarBtn.Name = "CancelarBtn";
+            this.CancelarBtn.Size = new System.Drawing.Size(75, 23);
+            this.CancelarBtn.TabIndex = 8;
+            this.CancelarBtn.Text = "Cancelar";
+            this.CancelarBtn.UseSelectable = true;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(54, 288);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(67, 19);
+            this.metroLabel1.TabIndex = 9;
+            this.metroLabel1.Text = "Endereço:";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(54, 208);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(49, 19);
+            this.metroLabel2.TabIndex = 10;
+            this.metroLabel2.Text = "Nome:";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(641, 246);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(29, 19);
+            this.metroLabel3.TabIndex = 11;
+            this.metroLabel3.Text = "RG:";
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(641, 284);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(36, 19);
+            this.metroLabel4.TabIndex = 12;
+            this.metroLabel4.Text = "CPF:";
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(54, 250);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(36, 19);
+            this.metroLabel5.TabIndex = 13;
+            this.metroLabel5.Text = "CEP:";
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(54, 326);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(48, 19);
+            this.metroLabel6.TabIndex = 14;
+            this.metroLabel6.Text = "Bairro:";
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(54, 360);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(54, 19);
+            this.metroLabel7.TabIndex = 15;
+            this.metroLabel7.Text = "Cidade:";
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(641, 208);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel8.TabIndex = 16;
+            this.metroLabel8.Text = "Email:";
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(638, 322);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(60, 19);
+            this.metroLabel9.TabIndex = 17;
+            this.metroLabel9.Text = "Telefone:";
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.Location = new System.Drawing.Point(641, 360);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(93, 19);
+            this.metroLabel10.TabIndex = 18;
+            this.metroLabel10.Text = "Data de Nasc.:";
+            // 
+            // boxNome
+            // 
+            // 
+            // 
+            // 
+            this.boxNome.CustomButton.Image = null;
+            this.boxNome.CustomButton.Location = new System.Drawing.Point(278, 1);
+            this.boxNome.CustomButton.Name = "";
+            this.boxNome.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.boxNome.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.boxNome.CustomButton.TabIndex = 1;
+            this.boxNome.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.boxNome.CustomButton.UseSelectable = true;
+            this.boxNome.CustomButton.Visible = false;
+            this.boxNome.Lines = new string[0];
+            this.boxNome.Location = new System.Drawing.Point(165, 204);
+            this.boxNome.MaxLength = 32767;
+            this.boxNome.Name = "boxNome";
+            this.boxNome.PasswordChar = '\0';
+            this.boxNome.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.boxNome.SelectedText = "";
+            this.boxNome.SelectionLength = 0;
+            this.boxNome.SelectionStart = 0;
+            this.boxNome.ShortcutsEnabled = true;
+            this.boxNome.Size = new System.Drawing.Size(300, 23);
+            this.boxNome.TabIndex = 19;
+            this.boxNome.UseSelectable = true;
+            this.boxNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.boxNome.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // BoxEndereco
+            // 
+            // 
+            // 
+            // 
+            this.BoxEndereco.CustomButton.Image = null;
+            this.BoxEndereco.CustomButton.Location = new System.Drawing.Point(278, 1);
+            this.BoxEndereco.CustomButton.Name = "";
+            this.BoxEndereco.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.BoxEndereco.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.BoxEndereco.CustomButton.TabIndex = 1;
+            this.BoxEndereco.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.BoxEndereco.CustomButton.UseSelectable = true;
+            this.BoxEndereco.CustomButton.Visible = false;
+            this.BoxEndereco.Lines = new string[0];
+            this.BoxEndereco.Location = new System.Drawing.Point(165, 284);
+            this.BoxEndereco.MaxLength = 32767;
+            this.BoxEndereco.Name = "BoxEndereco";
+            this.BoxEndereco.PasswordChar = '\0';
+            this.BoxEndereco.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.BoxEndereco.SelectedText = "";
+            this.BoxEndereco.SelectionLength = 0;
+            this.BoxEndereco.SelectionStart = 0;
+            this.BoxEndereco.ShortcutsEnabled = true;
+            this.BoxEndereco.Size = new System.Drawing.Size(300, 23);
+            this.BoxEndereco.TabIndex = 20;
+            this.BoxEndereco.UseSelectable = true;
+            this.BoxEndereco.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BoxEndereco.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // BoxBairro
+            // 
+            // 
+            // 
+            // 
+            this.BoxBairro.CustomButton.Image = null;
+            this.BoxBairro.CustomButton.Location = new System.Drawing.Point(278, 1);
+            this.BoxBairro.CustomButton.Name = "";
+            this.BoxBairro.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.BoxBairro.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.BoxBairro.CustomButton.TabIndex = 1;
+            this.BoxBairro.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.BoxBairro.CustomButton.UseSelectable = true;
+            this.BoxBairro.CustomButton.Visible = false;
+            this.BoxBairro.Lines = new string[0];
+            this.BoxBairro.Location = new System.Drawing.Point(165, 322);
+            this.BoxBairro.MaxLength = 32767;
+            this.BoxBairro.Name = "BoxBairro";
+            this.BoxBairro.PasswordChar = '\0';
+            this.BoxBairro.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.BoxBairro.SelectedText = "";
+            this.BoxBairro.SelectionLength = 0;
+            this.BoxBairro.SelectionStart = 0;
+            this.BoxBairro.ShortcutsEnabled = true;
+            this.BoxBairro.Size = new System.Drawing.Size(300, 23);
+            this.BoxBairro.TabIndex = 21;
+            this.BoxBairro.UseSelectable = true;
+            this.BoxBairro.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BoxBairro.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // boxCep
+            // 
+            // 
+            // 
+            // 
+            this.boxCep.CustomButton.Image = null;
+            this.boxCep.CustomButton.Location = new System.Drawing.Point(278, 1);
+            this.boxCep.CustomButton.Name = "";
+            this.boxCep.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.boxCep.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.boxCep.CustomButton.TabIndex = 1;
+            this.boxCep.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.boxCep.CustomButton.UseSelectable = true;
+            this.boxCep.CustomButton.Visible = false;
+            this.boxCep.Lines = new string[0];
+            this.boxCep.Location = new System.Drawing.Point(165, 246);
+            this.boxCep.MaxLength = 32767;
+            this.boxCep.Name = "boxCep";
+            this.boxCep.PasswordChar = '\0';
+            this.boxCep.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.boxCep.SelectedText = "";
+            this.boxCep.SelectionLength = 0;
+            this.boxCep.SelectionStart = 0;
+            this.boxCep.ShortcutsEnabled = true;
+            this.boxCep.Size = new System.Drawing.Size(300, 23);
+            this.boxCep.TabIndex = 22;
+            this.boxCep.UseSelectable = true;
+            this.boxCep.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.boxCep.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // BoxTelefone
+            // 
+            // 
+            // 
+            // 
+            this.BoxTelefone.CustomButton.Image = null;
+            this.BoxTelefone.CustomButton.Location = new System.Drawing.Point(278, 1);
+            this.BoxTelefone.CustomButton.Name = "";
+            this.BoxTelefone.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.BoxTelefone.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.BoxTelefone.CustomButton.TabIndex = 1;
+            this.BoxTelefone.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.BoxTelefone.CustomButton.UseSelectable = true;
+            this.BoxTelefone.CustomButton.Visible = false;
+            this.BoxTelefone.Lines = new string[0];
+            this.BoxTelefone.Location = new System.Drawing.Point(777, 322);
+            this.BoxTelefone.MaxLength = 32767;
+            this.BoxTelefone.Name = "BoxTelefone";
+            this.BoxTelefone.PasswordChar = '\0';
+            this.BoxTelefone.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.BoxTelefone.SelectedText = "";
+            this.BoxTelefone.SelectionLength = 0;
+            this.BoxTelefone.SelectionStart = 0;
+            this.BoxTelefone.ShortcutsEnabled = true;
+            this.BoxTelefone.Size = new System.Drawing.Size(300, 23);
+            this.BoxTelefone.TabIndex = 23;
+            this.BoxTelefone.UseSelectable = true;
+            this.BoxTelefone.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BoxTelefone.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // BoxEmail
+            // 
+            // 
+            // 
+            // 
+            this.BoxEmail.CustomButton.Image = null;
+            this.BoxEmail.CustomButton.Location = new System.Drawing.Point(278, 1);
+            this.BoxEmail.CustomButton.Name = "";
+            this.BoxEmail.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.BoxEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.BoxEmail.CustomButton.TabIndex = 1;
+            this.BoxEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.BoxEmail.CustomButton.UseSelectable = true;
+            this.BoxEmail.CustomButton.Visible = false;
+            this.BoxEmail.Lines = new string[0];
+            this.BoxEmail.Location = new System.Drawing.Point(777, 204);
+            this.BoxEmail.MaxLength = 32767;
+            this.BoxEmail.Name = "BoxEmail";
+            this.BoxEmail.PasswordChar = '\0';
+            this.BoxEmail.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.BoxEmail.SelectedText = "";
+            this.BoxEmail.SelectionLength = 0;
+            this.BoxEmail.SelectionStart = 0;
+            this.BoxEmail.ShortcutsEnabled = true;
+            this.BoxEmail.Size = new System.Drawing.Size(300, 23);
+            this.BoxEmail.TabIndex = 24;
+            this.BoxEmail.UseSelectable = true;
+            this.BoxEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BoxEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // BoxRg
+            // 
+            // 
+            // 
+            // 
+            this.BoxRg.CustomButton.Image = null;
+            this.BoxRg.CustomButton.Location = new System.Drawing.Point(278, 1);
+            this.BoxRg.CustomButton.Name = "";
+            this.BoxRg.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.BoxRg.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.BoxRg.CustomButton.TabIndex = 1;
+            this.BoxRg.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.BoxRg.CustomButton.UseSelectable = true;
+            this.BoxRg.CustomButton.Visible = false;
+            this.BoxRg.Lines = new string[0];
+            this.BoxRg.Location = new System.Drawing.Point(777, 242);
+            this.BoxRg.MaxLength = 32767;
+            this.BoxRg.Name = "BoxRg";
+            this.BoxRg.PasswordChar = '\0';
+            this.BoxRg.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.BoxRg.SelectedText = "";
+            this.BoxRg.SelectionLength = 0;
+            this.BoxRg.SelectionStart = 0;
+            this.BoxRg.ShortcutsEnabled = true;
+            this.BoxRg.Size = new System.Drawing.Size(300, 23);
+            this.BoxRg.TabIndex = 25;
+            this.BoxRg.UseSelectable = true;
+            this.BoxRg.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BoxRg.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // BoxCpf
+            // 
+            // 
+            // 
+            // 
+            this.BoxCpf.CustomButton.Image = null;
+            this.BoxCpf.CustomButton.Location = new System.Drawing.Point(278, 1);
+            this.BoxCpf.CustomButton.Name = "";
+            this.BoxCpf.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.BoxCpf.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.BoxCpf.CustomButton.TabIndex = 1;
+            this.BoxCpf.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.BoxCpf.CustomButton.UseSelectable = true;
+            this.BoxCpf.CustomButton.Visible = false;
+            this.BoxCpf.Lines = new string[0];
+            this.BoxCpf.Location = new System.Drawing.Point(777, 280);
+            this.BoxCpf.MaxLength = 32767;
+            this.BoxCpf.Name = "BoxCpf";
+            this.BoxCpf.PasswordChar = '\0';
+            this.BoxCpf.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.BoxCpf.SelectedText = "";
+            this.BoxCpf.SelectionLength = 0;
+            this.BoxCpf.SelectionStart = 0;
+            this.BoxCpf.ShortcutsEnabled = true;
+            this.BoxCpf.Size = new System.Drawing.Size(300, 23);
+            this.BoxCpf.TabIndex = 26;
+            this.BoxCpf.UseSelectable = true;
+            this.BoxCpf.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BoxCpf.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // BoxCidade
+            // 
+            // 
+            // 
+            // 
+            this.BoxCidade.CustomButton.Image = null;
+            this.BoxCidade.CustomButton.Location = new System.Drawing.Point(278, 1);
+            this.BoxCidade.CustomButton.Name = "";
+            this.BoxCidade.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.BoxCidade.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.BoxCidade.CustomButton.TabIndex = 1;
+            this.BoxCidade.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.BoxCidade.CustomButton.UseSelectable = true;
+            this.BoxCidade.CustomButton.Visible = false;
+            this.BoxCidade.Lines = new string[0];
+            this.BoxCidade.Location = new System.Drawing.Point(165, 360);
+            this.BoxCidade.MaxLength = 32767;
+            this.BoxCidade.Name = "BoxCidade";
+            this.BoxCidade.PasswordChar = '\0';
+            this.BoxCidade.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.BoxCidade.SelectedText = "";
+            this.BoxCidade.SelectionLength = 0;
+            this.BoxCidade.SelectionStart = 0;
+            this.BoxCidade.ShortcutsEnabled = true;
+            this.BoxCidade.Size = new System.Drawing.Size(300, 23);
+            this.BoxCidade.TabIndex = 27;
+            this.BoxCidade.UseSelectable = true;
+            this.BoxCidade.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BoxCidade.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // BoxData
+            // 
+            // 
+            // 
+            // 
+            this.BoxData.CustomButton.Image = null;
+            this.BoxData.CustomButton.Location = new System.Drawing.Point(278, 1);
+            this.BoxData.CustomButton.Name = "";
+            this.BoxData.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.BoxData.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.BoxData.CustomButton.TabIndex = 1;
+            this.BoxData.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.BoxData.CustomButton.UseSelectable = true;
+            this.BoxData.CustomButton.Visible = false;
+            this.BoxData.Lines = new string[0];
+            this.BoxData.Location = new System.Drawing.Point(777, 356);
+            this.BoxData.MaxLength = 32767;
+            this.BoxData.Name = "BoxData";
+            this.BoxData.PasswordChar = '\0';
+            this.BoxData.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.BoxData.SelectedText = "";
+            this.BoxData.SelectionLength = 0;
+            this.BoxData.SelectionStart = 0;
+            this.BoxData.ShortcutsEnabled = true;
+            this.BoxData.Size = new System.Drawing.Size(300, 23);
+            this.BoxData.TabIndex = 28;
+            this.BoxData.UseSelectable = true;
+            this.BoxData.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BoxData.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // idpessoaDataGridViewTextBoxColumn
+            // 
+            this.idpessoaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.idpessoaDataGridViewTextBoxColumn.DataPropertyName = "id_pessoa";
+            this.idpessoaDataGridViewTextBoxColumn.HeaderText = "id_pessoa";
+            this.idpessoaDataGridViewTextBoxColumn.Name = "idpessoaDataGridViewTextBoxColumn";
+            this.idpessoaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idpessoaDataGridViewTextBoxColumn.Width = 81;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomeDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // cepDataGridViewTextBoxColumn
+            // 
+            this.cepDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.cepDataGridViewTextBoxColumn.DataPropertyName = "cep";
+            this.cepDataGridViewTextBoxColumn.HeaderText = "CEP";
+            this.cepDataGridViewTextBoxColumn.Name = "cepDataGridViewTextBoxColumn";
+            this.cepDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cepDataGridViewTextBoxColumn.Width = 49;
+            // 
+            // enderecoDataGridViewTextBoxColumn
+            // 
+            this.enderecoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "endereco";
+            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereço";
+            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
+            this.enderecoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.enderecoDataGridViewTextBoxColumn.Width = 78;
+            // 
+            // bairroDataGridViewTextBoxColumn
+            // 
+            this.bairroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.bairroDataGridViewTextBoxColumn.DataPropertyName = "bairro";
+            this.bairroDataGridViewTextBoxColumn.HeaderText = "Bairro";
+            this.bairroDataGridViewTextBoxColumn.Name = "bairroDataGridViewTextBoxColumn";
+            this.bairroDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bairroDataGridViewTextBoxColumn.Width = 61;
+            // 
+            // cidadeDataGridViewTextBoxColumn
+            // 
+            this.cidadeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.cidadeDataGridViewTextBoxColumn.DataPropertyName = "cidade";
+            this.cidadeDataGridViewTextBoxColumn.HeaderText = "Cidade";
+            this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
+            this.cidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cidadeDataGridViewTextBoxColumn.Width = 66;
+            // 
+            // telefoneDataGridViewTextBoxColumn
+            // 
+            this.telefoneDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.telefoneDataGridViewTextBoxColumn.DataPropertyName = "telefone";
+            this.telefoneDataGridViewTextBoxColumn.HeaderText = "Telefone";
+            this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
+            this.telefoneDataGridViewTextBoxColumn.ReadOnly = true;
+            this.telefoneDataGridViewTextBoxColumn.Width = 73;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.Width = 57;
+            // 
+            // rgDataGridViewTextBoxColumn
+            // 
+            this.rgDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.rgDataGridViewTextBoxColumn.DataPropertyName = "rg";
+            this.rgDataGridViewTextBoxColumn.HeaderText = "RG";
+            this.rgDataGridViewTextBoxColumn.Name = "rgDataGridViewTextBoxColumn";
+            this.rgDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rgDataGridViewTextBoxColumn.Width = 45;
+            // 
+            // cpfDataGridViewTextBoxColumn
+            // 
+            this.cpfDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.cpfDataGridViewTextBoxColumn.DataPropertyName = "cpf";
+            this.cpfDataGridViewTextBoxColumn.HeaderText = "CPF";
+            this.cpfDataGridViewTextBoxColumn.Name = "cpfDataGridViewTextBoxColumn";
+            this.cpfDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cpfDataGridViewTextBoxColumn.Width = 49;
+            // 
+            // datanascDataGridViewTextBoxColumn
+            // 
+            this.datanascDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.datanascDataGridViewTextBoxColumn.DataPropertyName = "datanasc";
+            this.datanascDataGridViewTextBoxColumn.HeaderText = "Data de Nasc.";
+            this.datanascDataGridViewTextBoxColumn.Name = "datanascDataGridViewTextBoxColumn";
+            this.datanascDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // observacaoDataGridViewTextBoxColumn
+            // 
+            this.observacaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.observacaoDataGridViewTextBoxColumn.DataPropertyName = "observacao";
+            this.observacaoDataGridViewTextBoxColumn.HeaderText = "Observação";
+            this.observacaoDataGridViewTextBoxColumn.Name = "observacaoDataGridViewTextBoxColumn";
+            this.observacaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // VoltarBtn
+            // 
+            this.VoltarBtn.Location = new System.Drawing.Point(659, 411);
+            this.VoltarBtn.Name = "VoltarBtn";
+            this.VoltarBtn.Size = new System.Drawing.Size(75, 23);
+            this.VoltarBtn.TabIndex = 29;
+            this.VoltarBtn.Text = "Voltar";
+            this.VoltarBtn.UseSelectable = true;
+            // 
             // PsqCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 509);
+            this.ClientSize = new System.Drawing.Size(1088, 445);
+            this.Controls.Add(this.VoltarBtn);
+            this.Controls.Add(this.BoxData);
+            this.Controls.Add(this.BoxCidade);
+            this.Controls.Add(this.BoxCpf);
+            this.Controls.Add(this.BoxRg);
+            this.Controls.Add(this.BoxEmail);
+            this.Controls.Add(this.BoxTelefone);
+            this.Controls.Add(this.boxCep);
+            this.Controls.Add(this.BoxBairro);
+            this.Controls.Add(this.BoxEndereco);
+            this.Controls.Add(this.boxNome);
+            this.Controls.Add(this.metroLabel10);
+            this.Controls.Add(this.metroLabel9);
+            this.Controls.Add(this.metroLabel8);
+            this.Controls.Add(this.metroLabel7);
+            this.Controls.Add(this.metroLabel6);
+            this.Controls.Add(this.metroLabel5);
+            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.CancelarBtn);
+            this.Controls.Add(this.SalvarBtn);
             this.Controls.Add(this.NomeBox);
             this.Controls.Add(this.dgvHistorico);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -289,6 +751,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tccpessoasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -301,15 +764,38 @@
         private DataSet1TableAdapters.tcc_pessoasTableAdapter tcc_pessoasTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpessoaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cepDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bairroDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cepDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rgDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpfDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datanascDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn observacaoDataGridViewTextBoxColumn;
+        private MetroFramework.Controls.MetroButton SalvarBtn;
+        private MetroFramework.Controls.MetroButton CancelarBtn;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
+        private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private MetroFramework.Controls.MetroTextBox boxNome;
+        private MetroFramework.Controls.MetroTextBox BoxEndereco;
+        private MetroFramework.Controls.MetroTextBox BoxBairro;
+        private MetroFramework.Controls.MetroTextBox boxCep;
+        private MetroFramework.Controls.MetroTextBox BoxTelefone;
+        private MetroFramework.Controls.MetroTextBox BoxEmail;
+        private MetroFramework.Controls.MetroTextBox BoxRg;
+        private MetroFramework.Controls.MetroTextBox BoxCpf;
+        private MetroFramework.Controls.MetroTextBox BoxCidade;
+        private MetroFramework.Controls.MetroTextBox BoxData;
+        private MetroFramework.Controls.MetroButton VoltarBtn;
     }
 }

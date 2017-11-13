@@ -35,5 +35,30 @@ namespace TCC_Hidracom.Views
         {
 
         }
+
+        private void BoxBairro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VoltarBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BoxCidade_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
