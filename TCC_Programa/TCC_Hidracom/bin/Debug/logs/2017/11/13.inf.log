@@ -1,0 +1,2 @@
+[Start of the Program]
+09:02:58.163 [9] INFO  Databaselist - INSERT INTO tcc_pessoas (nome, endereco, bairro, cep, telefone, email, rg, cpf, cidade, datanasc, tipo, observacao) VALUES ('Shayene','Praça Coronel fernando prestes','Centro','05235031','1599757864','caiuoyabickuuuuu@rocket.pinto','321321313','32132132131','Sorocity','04/07/2017','0','Penesses é plural de penis')

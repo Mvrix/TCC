@@ -551,3 +551,6 @@ G:\TCC_Programa\TCC_Hidracom\obj\Debug\TCC_Hidracom.csproj.GenerateResource.Cach
 G:\TCC_Programa\TCC_Hidracom\obj\Debug\RdlCompile.cache
 G:\TCC_Programa\TCC_Hidracom\obj\Debug\RdlCompile.compiled
 G:\TCC_Programa\TCC_Hidracom\obj\Debug\TCC_Hidracom.Views.relatorioCliente.resources
+C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\TCC_Hidracom.Views.relatorioCliente.resources
+C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\TCC_Hidracom.csprojResolveAssemblyReference.cache
+C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\Hidracom_Content.g.cs

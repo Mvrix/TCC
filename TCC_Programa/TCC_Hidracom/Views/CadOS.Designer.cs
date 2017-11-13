@@ -34,7 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadOS));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataMarcada = new MetroFramework.Controls.MetroDateTime();
             this.produtoBox = new MetroFramework.Controls.MetroComboBox();
             this.tccprodutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new TCC_Hidracom.DataSet1();
@@ -53,13 +52,13 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.txtCliente = new MetroFramework.Controls.MetroTextBox();
             this.dgvCliente = new MetroFramework.Controls.MetroGrid();
-            this.txtNome = new MetroFramework.Controls.MetroTextBox();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.tcc_pessoasTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.tcc_pessoasTableAdapter();
             this.tcc_observacao_servicosTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.tcc_observacao_servicosTableAdapter();
             this.tcc_produtoTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.tcc_produtoTableAdapter();
+            this.dataMarcada = new MetroFramework.Controls.MetroDateTime();
+            this.txtNome = new MetroFramework.Controls.MetroTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tccprodutoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -87,14 +86,6 @@
             this.groupBox1.Size = new System.Drawing.Size(879, 166);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
-            // 
-            // dataMarcada
-            // 
-            this.dataMarcada.Location = new System.Drawing.Point(87, 117);
-            this.dataMarcada.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dataMarcada.Name = "dataMarcada";
-            this.dataMarcada.Size = new System.Drawing.Size(314, 29);
-            this.dataMarcada.TabIndex = 24;
             // 
             // produtoBox
             // 
@@ -217,11 +208,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtNome);
             this.groupBox2.Controls.Add(this.metroLabel5);
             this.groupBox2.Controls.Add(this.txtCliente);
             this.groupBox2.Controls.Add(this.dgvCliente);
-            this.groupBox2.Controls.Add(this.txtNome);
-            this.groupBox2.Controls.Add(this.metroButton3);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(23, 223);
             this.groupBox2.Name = "groupBox2";
@@ -233,7 +223,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(304, 20);
+            this.metroLabel5.Location = new System.Drawing.Point(314, 23);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(52, 19);
             this.metroLabel5.TabIndex = 11;
@@ -254,7 +244,7 @@
             this.txtCliente.CustomButton.UseSelectable = true;
             this.txtCliente.CustomButton.Visible = false;
             this.txtCliente.Lines = new string[0];
-            this.txtCliente.Location = new System.Drawing.Point(393, 19);
+            this.txtCliente.Location = new System.Drawing.Point(393, 23);
             this.txtCliente.MaxLength = 32767;
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.PasswordChar = '\0';
@@ -314,47 +304,6 @@
             this.dgvCliente.TabIndex = 9;
             this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
             // 
-            // txtNome
-            // 
-            // 
-            // 
-            // 
-            this.txtNome.CustomButton.Image = null;
-            this.txtNome.CustomButton.Location = new System.Drawing.Point(189, 1);
-            this.txtNome.CustomButton.Name = "";
-            this.txtNome.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtNome.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtNome.CustomButton.TabIndex = 1;
-            this.txtNome.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtNome.CustomButton.UseSelectable = true;
-            this.txtNome.CustomButton.Visible = false;
-            this.txtNome.Lines = new string[0];
-            this.txtNome.Location = new System.Drawing.Point(87, 19);
-            this.txtNome.MaxLength = 32767;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.PasswordChar = '\0';
-            this.txtNome.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtNome.SelectedText = "";
-            this.txtNome.SelectionLength = 0;
-            this.txtNome.SelectionStart = 0;
-            this.txtNome.ShortcutsEnabled = true;
-            this.txtNome.Size = new System.Drawing.Size(211, 23);
-            this.txtNome.TabIndex = 8;
-            this.txtNome.UseSelectable = true;
-            this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtNome.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtNome.Click += new System.EventHandler(this.metroTextBox2_Click);
-            // 
-            // metroButton3
-            // 
-            this.metroButton3.Location = new System.Drawing.Point(6, 19);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(75, 23);
-            this.metroButton3.TabIndex = 7;
-            this.metroButton3.Text = "Pesquisar";
-            this.metroButton3.UseSelectable = true;
-            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
-            // 
             // metroButton1
             // 
             this.metroButton1.Location = new System.Drawing.Point(456, 438);
@@ -387,6 +336,51 @@
             // tcc_produtoTableAdapter
             // 
             this.tcc_produtoTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataMarcada
+            // 
+            this.dataMarcada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dataMarcada.Location = new System.Drawing.Point(87, 110);
+            this.dataMarcada.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dataMarcada.Name = "dataMarcada";
+            this.dataMarcada.Size = new System.Drawing.Size(314, 29);
+            this.dataMarcada.TabIndex = 24;
+            // 
+            // txtNome
+            // 
+            // 
+            // 
+            // 
+            this.txtNome.CustomButton.BackColor = System.Drawing.Color.Transparent;
+            this.txtNome.CustomButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtNome.CustomButton.Image = global::TCC_Hidracom.Properties.Resources.active_search;
+            this.txtNome.CustomButton.Location = new System.Drawing.Point(231, 1);
+            this.txtNome.CustomButton.Name = "";
+            this.txtNome.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtNome.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtNome.CustomButton.TabIndex = 1;
+            this.txtNome.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtNome.CustomButton.UseCustomBackColor = true;
+            this.txtNome.CustomButton.UseSelectable = true;
+            this.txtNome.CustomButton.UseVisualStyleBackColor = false;
+            this.txtNome.Lines = new string[0];
+            this.txtNome.Location = new System.Drawing.Point(7, 23);
+            this.txtNome.MaxLength = 32767;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.PasswordChar = '\0';
+            this.txtNome.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtNome.SelectedText = "";
+            this.txtNome.SelectionLength = 0;
+            this.txtNome.SelectionStart = 0;
+            this.txtNome.ShortcutsEnabled = true;
+            this.txtNome.ShowButton = true;
+            this.txtNome.Size = new System.Drawing.Size(253, 23);
+            this.txtNome.TabIndex = 12;
+            this.txtNome.UseSelectable = true;
+            this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtNome.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNome.TextChanged += new System.EventHandler(this.metroButton3_Click);
+            this.txtNome.Click += new System.EventHandler(this.txtNome_Click);
             // 
             // CadOS
             // 
@@ -427,8 +421,6 @@
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroGrid dgvCliente;
-        private MetroFramework.Controls.MetroTextBox txtNome;
-        private MetroFramework.Controls.MetroButton metroButton3;
         private DataSet1 dataSet1;
         private DataSet1TableAdapters.tcc_pessoasTableAdapter tcc_pessoasTableAdapter;
         private MetroFramework.Controls.MetroLabel metroLabel4;
@@ -444,5 +436,6 @@
         private System.Windows.Forms.BindingSource tccprodutoBindingSource;
         private DataSet1TableAdapters.tcc_produtoTableAdapter tcc_produtoTableAdapter;
         private MetroFramework.Controls.MetroDateTime dataMarcada;
+        private MetroFramework.Controls.MetroTextBox txtNome;
     }
 }

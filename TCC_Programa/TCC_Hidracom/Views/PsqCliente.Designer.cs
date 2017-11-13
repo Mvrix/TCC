@@ -60,6 +60,7 @@
             this.BoxCpf = new MetroFramework.Controls.MetroTextBox();
             this.BoxCidade = new MetroFramework.Controls.MetroTextBox();
             this.BoxData = new MetroFramework.Controls.MetroTextBox();
+            this.VoltarBtn = new MetroFramework.Controls.MetroButton();
             this.idpessoaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cepDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,7 +73,6 @@
             this.cpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datanascDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.observacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VoltarBtn = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tccpessoasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -598,14 +598,23 @@
             this.BoxData.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.BoxData.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // VoltarBtn
+            // 
+            this.VoltarBtn.Location = new System.Drawing.Point(659, 411);
+            this.VoltarBtn.Name = "VoltarBtn";
+            this.VoltarBtn.Size = new System.Drawing.Size(75, 23);
+            this.VoltarBtn.TabIndex = 29;
+            this.VoltarBtn.Text = "Voltar";
+            this.VoltarBtn.UseSelectable = true;
+            // 
             // idpessoaDataGridViewTextBoxColumn
             // 
             this.idpessoaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.idpessoaDataGridViewTextBoxColumn.DataPropertyName = "id_pessoa";
-            this.idpessoaDataGridViewTextBoxColumn.HeaderText = "id_pessoa";
+            this.idpessoaDataGridViewTextBoxColumn.HeaderText = "Código";
             this.idpessoaDataGridViewTextBoxColumn.Name = "idpessoaDataGridViewTextBoxColumn";
             this.idpessoaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idpessoaDataGridViewTextBoxColumn.Width = 81;
+            this.idpessoaDataGridViewTextBoxColumn.Width = 68;
             // 
             // nomeDataGridViewTextBoxColumn
             // 
@@ -704,15 +713,6 @@
             this.observacaoDataGridViewTextBoxColumn.Name = "observacaoDataGridViewTextBoxColumn";
             this.observacaoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // VoltarBtn
-            // 
-            this.VoltarBtn.Location = new System.Drawing.Point(659, 411);
-            this.VoltarBtn.Name = "VoltarBtn";
-            this.VoltarBtn.Size = new System.Drawing.Size(75, 23);
-            this.VoltarBtn.TabIndex = 29;
-            this.VoltarBtn.Text = "Voltar";
-            this.VoltarBtn.UseSelectable = true;
-            // 
             // PsqCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -762,18 +762,6 @@
         private DataSet1 dataSet1;
         private System.Windows.Forms.BindingSource tccpessoasBindingSource;
         private DataSet1TableAdapters.tcc_pessoasTableAdapter tcc_pessoasTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idpessoaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cepDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bairroDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cidadeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rgDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cpfDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datanascDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn observacaoDataGridViewTextBoxColumn;
         private MetroFramework.Controls.MetroButton SalvarBtn;
         private MetroFramework.Controls.MetroButton CancelarBtn;
         private MetroFramework.Controls.MetroLabel metroLabel1;
@@ -797,5 +785,17 @@
         private MetroFramework.Controls.MetroTextBox BoxCidade;
         private MetroFramework.Controls.MetroTextBox BoxData;
         private MetroFramework.Controls.MetroButton VoltarBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idpessoaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cepDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bairroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rgDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cpfDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datanascDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn observacaoDataGridViewTextBoxColumn;
     }
 }

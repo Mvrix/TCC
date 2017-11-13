@@ -12,6 +12,9 @@ using System.Windows;
 using System.Windows.Input;
 using System.Data.SqlClient;
 using MetroFramework;
+using MetroFramework.Components;
+using MetroFramework.Interfaces;
+using MetroFramework.Fonts;
 
 
 namespace TCC_Hidracom.Views
@@ -73,7 +76,7 @@ namespace TCC_Hidracom.Views
 
         private void metroLabel1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         //selecionando a tabela e amostrando os dados NÃO ESTA FUNCIONANDO PRECIS AIDDA FAZER A FUCKING EVENTS NO GRID
@@ -230,5 +233,15 @@ namespace TCC_Hidracom.Views
         {
             txtCliente.Text = dgvCliente.SelectedRows[0].Cells[1].Value.ToString();
         }
-     }
+
+        private void dataMarcada_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNome_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
    }
