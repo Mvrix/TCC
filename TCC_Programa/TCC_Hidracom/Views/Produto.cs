@@ -70,5 +70,10 @@ namespace TCC_Hidracom.Views
             System.Windows.Application.Current.MainWindow.Visibility = Visibility.Visible;
             Close();
         }
+
+        private void txtDescricao_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

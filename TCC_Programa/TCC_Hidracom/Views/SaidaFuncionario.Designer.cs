@@ -50,7 +50,7 @@
             this.groupBox1.Controls.Add(this.tecnicoss);
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Controls.Add(this.metroUserControl1);
-            this.groupBox1.Location = new System.Drawing.Point(11, 80);
+            this.groupBox1.Location = new System.Drawing.Point(10, 63);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(425, 85);
             this.groupBox1.TabIndex = 12;
@@ -102,7 +102,7 @@
             this.groupBox3.Controls.Add(this.servicoss);
             this.groupBox3.Controls.Add(this.metroLabel2);
             this.groupBox3.Controls.Add(this.metroUserControl3);
-            this.groupBox3.Location = new System.Drawing.Point(481, 80);
+            this.groupBox3.Location = new System.Drawing.Point(441, 63);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(425, 85);
             this.groupBox3.TabIndex = 24;
@@ -150,7 +150,7 @@
             // metroButton2
             // 
             this.metroButton2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.metroButton2.Location = new System.Drawing.Point(418, 171);
+            this.metroButton2.Location = new System.Drawing.Point(400, 154);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(75, 23);
             this.metroButton2.TabIndex = 25;
@@ -162,7 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(918, 203);
+            this.ClientSize = new System.Drawing.Size(877, 186);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);

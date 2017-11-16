@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadOS));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataMarcada = new MetroFramework.Controls.MetroDateTime();
             this.produtoBox = new MetroFramework.Controls.MetroComboBox();
             this.tccprodutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new TCC_Hidracom.DataSet1();
@@ -49,6 +50,7 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroUserControl1 = new MetroFramework.Controls.MetroUserControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtNome = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.txtCliente = new MetroFramework.Controls.MetroTextBox();
             this.dgvCliente = new MetroFramework.Controls.MetroGrid();
@@ -57,8 +59,6 @@
             this.tcc_pessoasTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.tcc_pessoasTableAdapter();
             this.tcc_observacao_servicosTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.tcc_observacao_servicosTableAdapter();
             this.tcc_produtoTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.tcc_produtoTableAdapter();
-            this.dataMarcada = new MetroFramework.Controls.MetroDateTime();
-            this.txtNome = new MetroFramework.Controls.MetroTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tccprodutoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -73,19 +73,28 @@
             this.groupBox1.Controls.Add(this.dataMarcada);
             this.groupBox1.Controls.Add(this.produtoBox);
             this.groupBox1.Controls.Add(this.pro);
+            this.groupBox1.Controls.Add(this.metroLabel2);
             this.groupBox1.Controls.Add(this.metroLabel4);
             this.groupBox1.Controls.Add(this.CampoTexto);
             this.groupBox1.Controls.Add(this.servicoss);
             this.groupBox1.Controls.Add(this.tecnicoss);
             this.groupBox1.Controls.Add(this.metroLabel3);
-            this.groupBox1.Controls.Add(this.metroLabel2);
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Controls.Add(this.metroUserControl1);
-            this.groupBox1.Location = new System.Drawing.Point(23, 63);
+            this.groupBox1.Location = new System.Drawing.Point(21, 55);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(879, 166);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
+            // 
+            // dataMarcada
+            // 
+            this.dataMarcada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dataMarcada.Location = new System.Drawing.Point(94, 110);
+            this.dataMarcada.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dataMarcada.Name = "dataMarcada";
+            this.dataMarcada.Size = new System.Drawing.Size(104, 29);
+            this.dataMarcada.TabIndex = 24;
             // 
             // produtoBox
             // 
@@ -93,7 +102,7 @@
             this.produtoBox.DisplayMember = "descricao";
             this.produtoBox.FormattingEnabled = true;
             this.produtoBox.ItemHeight = 23;
-            this.produtoBox.Location = new System.Drawing.Point(545, 117);
+            this.produtoBox.Location = new System.Drawing.Point(545, 110);
             this.produtoBox.Name = "produtoBox";
             this.produtoBox.Size = new System.Drawing.Size(326, 29);
             this.produtoBox.TabIndex = 23;
@@ -113,7 +122,7 @@
             // pro
             // 
             this.pro.AutoSize = true;
-            this.pro.Location = new System.Drawing.Point(470, 117);
+            this.pro.Location = new System.Drawing.Point(479, 110);
             this.pro.Name = "pro";
             this.pro.Size = new System.Drawing.Size(60, 19);
             this.pro.TabIndex = 22;
@@ -122,7 +131,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(470, 16);
+            this.metroLabel4.Location = new System.Drawing.Point(471, 16);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(68, 19);
             this.metroLabel4.TabIndex = 18;
@@ -134,7 +143,7 @@
             this.CampoTexto.Name = "CampoTexto";
             this.CampoTexto.Size = new System.Drawing.Size(326, 83);
             this.CampoTexto.TabIndex = 19;
-            this.CampoTexto.Text = "Adicione descrição de serviço aqui!";
+            this.CampoTexto.Text = "Adicione aqui a descrição do serviço.";
             // 
             // servicoss
             // 
@@ -142,7 +151,7 @@
             this.servicoss.DisplayMember = "nome_servico";
             this.servicoss.FormattingEnabled = true;
             this.servicoss.ItemHeight = 23;
-            this.servicoss.Location = new System.Drawing.Point(87, 67);
+            this.servicoss.Location = new System.Drawing.Point(94, 61);
             this.servicoss.Name = "servicoss";
             this.servicoss.Size = new System.Drawing.Size(314, 29);
             this.servicoss.TabIndex = 21;
@@ -160,9 +169,9 @@
             this.tecnicoss.DisplayMember = "nome";
             this.tecnicoss.FormattingEnabled = true;
             this.tecnicoss.ItemHeight = 23;
-            this.tecnicoss.Location = new System.Drawing.Point(87, 20);
+            this.tecnicoss.Location = new System.Drawing.Point(94, 16);
             this.tecnicoss.Name = "tecnicoss";
-            this.tecnicoss.Size = new System.Drawing.Size(314, 29);
+            this.tecnicoss.Size = new System.Drawing.Size(222, 29);
             this.tecnicoss.TabIndex = 15;
             this.tecnicoss.UseSelectable = true;
             this.tecnicoss.ValueMember = "id_pessoa";
@@ -171,7 +180,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(0, 117);
+            this.metroLabel3.Location = new System.Drawing.Point(8, 110);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(84, 19);
             this.metroLabel3.TabIndex = 14;
@@ -181,7 +190,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(7, 67);
+            this.metroLabel2.Location = new System.Drawing.Point(36, 61);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(55, 19);
             this.metroLabel2.TabIndex = 13;
@@ -191,7 +200,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(6, 20);
+            this.metroLabel1.Location = new System.Drawing.Point(37, 16);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(54, 19);
             this.metroLabel1.TabIndex = 12;
@@ -200,7 +209,7 @@
             // 
             // metroUserControl1
             // 
-            this.metroUserControl1.Location = new System.Drawing.Point(166, 24);
+            this.metroUserControl1.Location = new System.Drawing.Point(192, 24);
             this.metroUserControl1.Name = "metroUserControl1";
             this.metroUserControl1.Size = new System.Drawing.Size(8, 8);
             this.metroUserControl1.TabIndex = 11;
@@ -213,17 +222,53 @@
             this.groupBox2.Controls.Add(this.txtCliente);
             this.groupBox2.Controls.Add(this.dgvCliente);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(23, 223);
+            this.groupBox2.Location = new System.Drawing.Point(21, 222);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(879, 200);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Selecione o Cliente:";
             // 
+            // txtNome
+            // 
+            // 
+            // 
+            // 
+            this.txtNome.CustomButton.BackColor = System.Drawing.Color.Transparent;
+            this.txtNome.CustomButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtNome.CustomButton.Image = global::TCC_Hidracom.Properties.Resources.active_search;
+            this.txtNome.CustomButton.Location = new System.Drawing.Point(231, 1);
+            this.txtNome.CustomButton.Name = "";
+            this.txtNome.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtNome.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtNome.CustomButton.TabIndex = 1;
+            this.txtNome.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtNome.CustomButton.UseCustomBackColor = true;
+            this.txtNome.CustomButton.UseSelectable = true;
+            this.txtNome.CustomButton.UseVisualStyleBackColor = false;
+            this.txtNome.Lines = new string[0];
+            this.txtNome.Location = new System.Drawing.Point(7, 23);
+            this.txtNome.MaxLength = 32767;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.PasswordChar = '\0';
+            this.txtNome.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtNome.SelectedText = "";
+            this.txtNome.SelectionLength = 0;
+            this.txtNome.SelectionStart = 0;
+            this.txtNome.ShortcutsEnabled = true;
+            this.txtNome.ShowButton = true;
+            this.txtNome.Size = new System.Drawing.Size(253, 23);
+            this.txtNome.TabIndex = 12;
+            this.txtNome.UseSelectable = true;
+            this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtNome.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNome.TextChanged += new System.EventHandler(this.metroButton3_Click);
+            this.txtNome.Click += new System.EventHandler(this.txtNome_Click);
+            // 
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(314, 23);
+            this.metroLabel5.Location = new System.Drawing.Point(335, 23);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(52, 19);
             this.metroLabel5.TabIndex = 11;
@@ -287,7 +332,7 @@
             this.dgvCliente.EnableHeadersVisualStyles = false;
             this.dgvCliente.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvCliente.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvCliente.Location = new System.Drawing.Point(7, 49);
+            this.dgvCliente.Location = new System.Drawing.Point(6, 49);
             this.dgvCliente.Name = "dgvCliente";
             this.dgvCliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -300,13 +345,13 @@
             this.dgvCliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCliente.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCliente.Size = new System.Drawing.Size(880, 151);
+            this.dgvCliente.Size = new System.Drawing.Size(867, 145);
             this.dgvCliente.TabIndex = 9;
             this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(456, 438);
+            this.metroButton1.Location = new System.Drawing.Point(454, 428);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(75, 23);
             this.metroButton1.TabIndex = 15;
@@ -317,7 +362,7 @@
             // metroButton2
             // 
             this.metroButton2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.metroButton2.Location = new System.Drawing.Point(375, 438);
+            this.metroButton2.Location = new System.Drawing.Point(373, 428);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(75, 23);
             this.metroButton2.TabIndex = 16;
@@ -337,56 +382,11 @@
             // 
             this.tcc_produtoTableAdapter.ClearBeforeFill = true;
             // 
-            // dataMarcada
-            // 
-            this.dataMarcada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dataMarcada.Location = new System.Drawing.Point(87, 110);
-            this.dataMarcada.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dataMarcada.Name = "dataMarcada";
-            this.dataMarcada.Size = new System.Drawing.Size(314, 29);
-            this.dataMarcada.TabIndex = 24;
-            // 
-            // txtNome
-            // 
-            // 
-            // 
-            // 
-            this.txtNome.CustomButton.BackColor = System.Drawing.Color.Transparent;
-            this.txtNome.CustomButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtNome.CustomButton.Image = global::TCC_Hidracom.Properties.Resources.active_search;
-            this.txtNome.CustomButton.Location = new System.Drawing.Point(231, 1);
-            this.txtNome.CustomButton.Name = "";
-            this.txtNome.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtNome.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtNome.CustomButton.TabIndex = 1;
-            this.txtNome.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtNome.CustomButton.UseCustomBackColor = true;
-            this.txtNome.CustomButton.UseSelectable = true;
-            this.txtNome.CustomButton.UseVisualStyleBackColor = false;
-            this.txtNome.Lines = new string[0];
-            this.txtNome.Location = new System.Drawing.Point(7, 23);
-            this.txtNome.MaxLength = 32767;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.PasswordChar = '\0';
-            this.txtNome.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtNome.SelectedText = "";
-            this.txtNome.SelectionLength = 0;
-            this.txtNome.SelectionStart = 0;
-            this.txtNome.ShortcutsEnabled = true;
-            this.txtNome.ShowButton = true;
-            this.txtNome.Size = new System.Drawing.Size(253, 23);
-            this.txtNome.TabIndex = 12;
-            this.txtNome.UseSelectable = true;
-            this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtNome.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtNome.TextChanged += new System.EventHandler(this.metroButton3_Click);
-            this.txtNome.Click += new System.EventHandler(this.txtNome_Click);
-            // 
             // CadOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 484);
+            this.ClientSize = new System.Drawing.Size(917, 464);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.groupBox2);

@@ -88,7 +88,7 @@
             this.dgvHistorico.EnableHeadersVisualStyles = false;
             this.dgvHistorico.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvHistorico.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvHistorico.Location = new System.Drawing.Point(23, 111);
+            this.dgvHistorico.Location = new System.Drawing.Point(23, 98);
             this.dgvHistorico.Name = "dgvHistorico";
             this.dgvHistorico.ReadOnly = true;
             this.dgvHistorico.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -102,7 +102,7 @@
             this.dgvHistorico.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHistorico.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvHistorico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorico.Size = new System.Drawing.Size(849, 332);
+            this.dgvHistorico.Size = new System.Drawing.Size(589, 332);
             this.dgvHistorico.TabIndex = 0;
             this.dgvHistorico.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorico_CellContentClick);
             // 
@@ -169,7 +169,7 @@
             // metroButton2
             // 
             this.metroButton2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.metroButton2.Location = new System.Drawing.Point(410, 449);
+            this.metroButton2.Location = new System.Drawing.Point(275, 436);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(75, 23);
             this.metroButton2.TabIndex = 17;
@@ -193,7 +193,7 @@
             this.NomeBox.CustomButton.UseSelectable = true;
             this.NomeBox.CustomButton.Visible = false;
             this.NomeBox.Lines = new string[0];
-            this.NomeBox.Location = new System.Drawing.Point(23, 80);
+            this.NomeBox.Location = new System.Drawing.Point(23, 63);
             this.NomeBox.MaxLength = 32767;
             this.NomeBox.Name = "NomeBox";
             this.NomeBox.PasswordChar = '\0';
@@ -218,7 +218,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 482);
+            this.ClientSize = new System.Drawing.Size(632, 475);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.NomeBox);
             this.Controls.Add(this.dgvHistorico);

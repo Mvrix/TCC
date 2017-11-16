@@ -44,9 +44,9 @@
             this.groupBox2.Controls.Add(this.Button1);
             this.groupBox2.Controls.Add(this.metroUserControl2);
             this.groupBox2.Controls.Add(this.metroLabel3);
-            this.groupBox2.Location = new System.Drawing.Point(23, 63);
+            this.groupBox2.Location = new System.Drawing.Point(18, 63);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(425, 79);
+            this.groupBox2.Size = new System.Drawing.Size(425, 87);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             // 
@@ -55,7 +55,7 @@
             this.clientes.DisplayMember = "nome_servico";
             this.clientes.FormattingEnabled = true;
             this.clientes.ItemHeight = 23;
-            this.clientes.Location = new System.Drawing.Point(70, 12);
+            this.clientes.Location = new System.Drawing.Point(65, 19);
             this.clientes.Name = "clientes";
             this.clientes.Size = new System.Drawing.Size(314, 29);
             this.clientes.TabIndex = 28;
@@ -64,7 +64,7 @@
             // 
             // Button1
             // 
-            this.Button1.Location = new System.Drawing.Point(116, 47);
+            this.Button1.Location = new System.Drawing.Point(115, 54);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(191, 23);
             this.Button1.TabIndex = 27;
@@ -83,7 +83,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(7, 16);
+            this.metroLabel3.Location = new System.Drawing.Point(7, 29);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(52, 19);
             this.metroLabel3.TabIndex = 14;
@@ -91,7 +91,7 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(198, 148);
+            this.metroButton1.Location = new System.Drawing.Point(198, 156);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(75, 23);
             this.metroButton1.TabIndex = 25;
@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 173);
+            this.ClientSize = new System.Drawing.Size(460, 187);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -39,7 +39,7 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(47, 207);
+            this.metroButton1.Location = new System.Drawing.Point(44, 144);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(75, 23);
             this.metroButton1.TabIndex = 0;
@@ -50,7 +50,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(28, 98);
+            this.metroLabel1.Location = new System.Drawing.Point(53, 67);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(49, 19);
             this.metroLabel1.TabIndex = 1;
@@ -59,7 +59,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(28, 151);
+            this.metroLabel2.Location = new System.Drawing.Point(19, 103);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(83, 19);
             this.metroLabel2.TabIndex = 2;
@@ -80,7 +80,7 @@
             this.ObsBox.CustomButton.UseSelectable = true;
             this.ObsBox.CustomButton.Visible = false;
             this.ObsBox.Lines = new string[0];
-            this.ObsBox.Location = new System.Drawing.Point(163, 147);
+            this.ObsBox.Location = new System.Drawing.Point(112, 99);
             this.ObsBox.MaxLength = 32767;
             this.ObsBox.Name = "ObsBox";
             this.ObsBox.PasswordChar = '\0';
@@ -110,7 +110,7 @@
             this.NomeBox.CustomButton.UseSelectable = true;
             this.NomeBox.CustomButton.Visible = false;
             this.NomeBox.Lines = new string[0];
-            this.NomeBox.Location = new System.Drawing.Point(163, 98);
+            this.NomeBox.Location = new System.Drawing.Point(112, 63);
             this.NomeBox.MaxLength = 32767;
             this.NomeBox.Name = "NomeBox";
             this.NomeBox.PasswordChar = '\0';
@@ -127,7 +127,7 @@
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(174, 207);
+            this.metroButton2.Location = new System.Drawing.Point(154, 144);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(75, 23);
             this.metroButton2.TabIndex = 5;
@@ -139,7 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(303, 256);
+            this.ClientSize = new System.Drawing.Size(267, 198);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.NomeBox);
             this.Controls.Add(this.ObsBox);
