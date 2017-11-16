@@ -39,6 +39,7 @@
             this.tccprodutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new TCC_Hidracom.DataSet1();
             this.pro = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.CampoTexto = new System.Windows.Forms.RichTextBox();
             this.servicoss = new MetroFramework.Controls.MetroComboBox();
@@ -46,7 +47,6 @@
             this.tecnicoss = new MetroFramework.Controls.MetroComboBox();
             this.tccpessoasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroUserControl1 = new MetroFramework.Controls.MetroUserControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -59,6 +59,8 @@
             this.tcc_pessoasTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.tcc_pessoasTableAdapter();
             this.tcc_observacao_servicosTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.tcc_observacao_servicosTableAdapter();
             this.tcc_produtoTableAdapter = new TCC_Hidracom.DataSet1TableAdapters.tcc_produtoTableAdapter();
+            this.btnVol = new MetroFramework.Controls.MetroButton();
+            this.btnAva = new MetroFramework.Controls.MetroButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tccprodutoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -90,7 +92,7 @@
             // dataMarcada
             // 
             this.dataMarcada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dataMarcada.Location = new System.Drawing.Point(94, 110);
+            this.dataMarcada.Location = new System.Drawing.Point(92, 110);
             this.dataMarcada.MinimumSize = new System.Drawing.Size(0, 29);
             this.dataMarcada.Name = "dataMarcada";
             this.dataMarcada.Size = new System.Drawing.Size(104, 29);
@@ -128,6 +130,16 @@
             this.pro.TabIndex = 22;
             this.pro.Text = "Produto:";
             // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(7, 61);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(55, 19);
+            this.metroLabel2.TabIndex = 13;
+            this.metroLabel2.Text = "Serviço:";
+            this.metroLabel2.Click += new System.EventHandler(this.metroLabel2_Click);
+            // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
@@ -151,7 +163,7 @@
             this.servicoss.DisplayMember = "nome_servico";
             this.servicoss.FormattingEnabled = true;
             this.servicoss.ItemHeight = 23;
-            this.servicoss.Location = new System.Drawing.Point(94, 61);
+            this.servicoss.Location = new System.Drawing.Point(92, 61);
             this.servicoss.Name = "servicoss";
             this.servicoss.Size = new System.Drawing.Size(314, 29);
             this.servicoss.TabIndex = 21;
@@ -169,7 +181,7 @@
             this.tecnicoss.DisplayMember = "nome";
             this.tecnicoss.FormattingEnabled = true;
             this.tecnicoss.ItemHeight = 23;
-            this.tecnicoss.Location = new System.Drawing.Point(94, 16);
+            this.tecnicoss.Location = new System.Drawing.Point(92, 16);
             this.tecnicoss.Name = "tecnicoss";
             this.tecnicoss.Size = new System.Drawing.Size(222, 29);
             this.tecnicoss.TabIndex = 15;
@@ -180,27 +192,17 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(8, 110);
+            this.metroLabel3.Location = new System.Drawing.Point(6, 110);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(84, 19);
             this.metroLabel3.TabIndex = 14;
             this.metroLabel3.Text = "Ocorreu em:";
             this.metroLabel3.Click += new System.EventHandler(this.metroLabel3_Click);
             // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(36, 61);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(55, 19);
-            this.metroLabel2.TabIndex = 13;
-            this.metroLabel2.Text = "Serviço:";
-            this.metroLabel2.Click += new System.EventHandler(this.metroLabel2_Click);
-            // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(37, 16);
+            this.metroLabel1.Location = new System.Drawing.Point(8, 16);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(54, 19);
             this.metroLabel1.TabIndex = 12;
@@ -209,7 +211,7 @@
             // 
             // metroUserControl1
             // 
-            this.metroUserControl1.Location = new System.Drawing.Point(192, 24);
+            this.metroUserControl1.Location = new System.Drawing.Point(163, 24);
             this.metroUserControl1.Name = "metroUserControl1";
             this.metroUserControl1.Size = new System.Drawing.Size(8, 8);
             this.metroUserControl1.TabIndex = 11;
@@ -217,6 +219,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnAva);
+            this.groupBox2.Controls.Add(this.btnVol);
             this.groupBox2.Controls.Add(this.txtNome);
             this.groupBox2.Controls.Add(this.metroLabel5);
             this.groupBox2.Controls.Add(this.txtCliente);
@@ -262,8 +266,7 @@
             this.txtNome.UseSelectable = true;
             this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNome.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtNome.TextChanged += new System.EventHandler(this.metroButton3_Click);
-            this.txtNome.Click += new System.EventHandler(this.txtNome_Click);
+            this.txtNome.TextChanged += new System.EventHandler(this.NomeBox_Click);
             // 
             // metroLabel5
             // 
@@ -303,6 +306,7 @@
             this.txtCliente.UseSelectable = true;
             this.txtCliente.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCliente.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCliente.TextChanged += new System.EventHandler(this.metroTextBox1_Click);
             this.txtCliente.Click += new System.EventHandler(this.metroTextBox1_Click);
             // 
             // dgvCliente
@@ -345,7 +349,7 @@
             this.dgvCliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCliente.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCliente.Size = new System.Drawing.Size(867, 145);
+            this.dgvCliente.Size = new System.Drawing.Size(867, 119);
             this.dgvCliente.TabIndex = 9;
             this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
             // 
@@ -381,6 +385,26 @@
             // tcc_produtoTableAdapter
             // 
             this.tcc_produtoTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnVol
+            // 
+            this.btnVol.Location = new System.Drawing.Point(6, 171);
+            this.btnVol.Name = "btnVol";
+            this.btnVol.Size = new System.Drawing.Size(75, 23);
+            this.btnVol.TabIndex = 16;
+            this.btnVol.Text = "<< Voltar";
+            this.btnVol.UseSelectable = true;
+            this.btnVol.Click += new System.EventHandler(this.btnVol_Click);
+            // 
+            // btnAva
+            // 
+            this.btnAva.Location = new System.Drawing.Point(796, 171);
+            this.btnAva.Name = "btnAva";
+            this.btnAva.Size = new System.Drawing.Size(75, 23);
+            this.btnAva.TabIndex = 17;
+            this.btnAva.Text = "Avançar >>";
+            this.btnAva.UseSelectable = true;
+            this.btnAva.Click += new System.EventHandler(this.btnAva_Click);
             // 
             // CadOS
             // 
@@ -437,5 +461,7 @@
         private DataSet1TableAdapters.tcc_produtoTableAdapter tcc_produtoTableAdapter;
         private MetroFramework.Controls.MetroDateTime dataMarcada;
         private MetroFramework.Controls.MetroTextBox txtNome;
+        private MetroFramework.Controls.MetroButton btnAva;
+        private MetroFramework.Controls.MetroButton btnVol;
     }
 }

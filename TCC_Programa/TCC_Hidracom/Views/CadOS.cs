@@ -19,17 +19,17 @@ using MetroFramework.Fonts;
 
 namespace TCC_Hidracom.Views
 {
+
     public partial class CadOS : MetroForm
     {
+        private int pagina = 0;
+        private int num_por_pagina = 2;
         public CadOS()
         {
             InitializeComponent();
-
-
+            GerarPaginacao();
             PreencherFuncionario();
-        }
-
-
+        }     
         public void PreencherFuncionario()
         {
             using (var conn = new SqlConnection(Properties.Settings.Default.db_01359_14_A_1_2015ConnectionString))
@@ -147,19 +147,7 @@ namespace TCC_Hidracom.Views
 
         }
 
-        //private void fillByFuncionario1ToolStripButton_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        this.tcc_pessoasTableAdapter.FillByFuncionario1(this.dataSet1.tcc_pessoas);
-        //    } 
-        //    catch (System.Exception ex)
-        //    {
-        //        System.Windows.Forms.MessageBox.Show(ex.Message);
-        //    }
-
-        //}
-
+        
         private void fillByFuncionarioToolStripButton_Click_1(object sender, EventArgs e)
         {
             try
@@ -177,13 +165,17 @@ namespace TCC_Hidracom.Views
         {
             PreencherServico();
         }
+        private void NomeBox_Click(object sender, EventArgs e)
+        {
+            dgvCliente.DataSource = tcc_pessoasTableAdapter.GetDataByClientePsq(string.Format("%{0}%", txtNome.Text));
+        }
 
-        private void metroButton3_Click(object sender, EventArgs e)
+        public void GerarPaginacao()
         {
             using (var conn = new SqlConnection(Properties.Settings.Default.db_01359_14_A_1_2015ConnectionString))
             {
                 conn.Open();
-                using (var sc = new SqlCommand("SELECT * FROM tcc_pessoas where tipo = 0 and nome like '%" + txtNome.Text + "%'", conn))
+                using (var sc = new SqlCommand(string.Format(Selects.SELECT_TCC_PESSOAS_PAGINACAO, pagina, num_por_pagina, 0), conn))
                 {
                     SqlDataReader reader;
 
@@ -242,6 +234,20 @@ namespace TCC_Hidracom.Views
         private void txtNome_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAva_Click(object sender, EventArgs e)
+        {
+            pagina++;
+            GerarPaginacao();
+        }
+
+        private void btnVol_Click(object sender, EventArgs e)
+        {
+            if(pagina > 0){
+                pagina--;
+                GerarPaginacao();
+            }
         }
     }
    }
