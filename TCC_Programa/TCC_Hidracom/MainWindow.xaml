@@ -57,7 +57,7 @@
         </tb:TaskbarIcon>
 
         <Viewbox Grid.Row="1">
-            <RadialMenu:RadialMenu x:Name="MyRadialMenu" Background="White">
+            <RadialMenu:RadialMenu x:Name="MyRadialMenu" Background="WhiteSmoke">
                 <RadialMenu:RadialMenu.CentralItem>
                     <RadialMenu:RadialMenuCentralItem Click="RadialMenuCentralItem_Click">
                         <TextBlock>Minimizar</TextBlock>

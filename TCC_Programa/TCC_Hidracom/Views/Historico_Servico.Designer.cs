@@ -102,7 +102,7 @@
             this.dgvHistorico.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHistorico.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvHistorico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorico.Size = new System.Drawing.Size(589, 332);
+            this.dgvHistorico.Size = new System.Drawing.Size(589, 189);
             this.dgvHistorico.TabIndex = 0;
             this.dgvHistorico.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorico_CellContentClick);
             // 
@@ -169,7 +169,7 @@
             // metroButton2
             // 
             this.metroButton2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.metroButton2.Location = new System.Drawing.Point(275, 436);
+            this.metroButton2.Location = new System.Drawing.Point(283, 293);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(75, 23);
             this.metroButton2.TabIndex = 17;
@@ -182,8 +182,7 @@
             // 
             // 
             // 
-            this.NomeBox.CustomButton.BackgroundImage = global::TCC_Hidracom.Properties.Resources.active_search;
-            this.NomeBox.CustomButton.Image = null;
+            this.NomeBox.CustomButton.Image = global::TCC_Hidracom.Properties.Resources.Search_button;
             this.NomeBox.CustomButton.Location = new System.Drawing.Point(231, 1);
             this.NomeBox.CustomButton.Name = "";
             this.NomeBox.CustomButton.Size = new System.Drawing.Size(21, 21);
@@ -191,7 +190,6 @@
             this.NomeBox.CustomButton.TabIndex = 1;
             this.NomeBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.NomeBox.CustomButton.UseSelectable = true;
-            this.NomeBox.CustomButton.Visible = false;
             this.NomeBox.Lines = new string[0];
             this.NomeBox.Location = new System.Drawing.Point(23, 63);
             this.NomeBox.MaxLength = 32767;
@@ -202,6 +200,7 @@
             this.NomeBox.SelectionLength = 0;
             this.NomeBox.SelectionStart = 0;
             this.NomeBox.ShortcutsEnabled = true;
+            this.NomeBox.ShowButton = true;
             this.NomeBox.Size = new System.Drawing.Size(253, 23);
             this.NomeBox.TabIndex = 2;
             this.NomeBox.UseSelectable = true;
@@ -218,7 +217,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 475);
+            this.ClientSize = new System.Drawing.Size(632, 326);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.NomeBox);
             this.Controls.Add(this.dgvHistorico);

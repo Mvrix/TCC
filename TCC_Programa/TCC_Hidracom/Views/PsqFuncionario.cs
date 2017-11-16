@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MetroFramework;
+using System.Windows;
 
 namespace TCC_Hidracom.Views
 {
@@ -48,7 +49,8 @@ namespace TCC_Hidracom.Views
 
         private void VoltarBtn_Click(object sender, EventArgs e)
         {
-
+            System.Windows.Application.Current.MainWindow.Visibility = Visibility.Visible;
+            Close();
         }
 
         private void BoxCidade_Click(object sender, EventArgs e)

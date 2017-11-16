@@ -585,7 +585,6 @@ C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\bin\Debug
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\Style\Icons.baml
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\MainWindow.g.cs
-C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\Views\HistoricoOs .g.cs
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\Views\Historico.g.cs
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\Views\Caixinhas\Cadastrado.g.cs
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\Views\NovaTela.g.cs
@@ -603,7 +602,6 @@ C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\Style\Scroll.baml
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\Style\ToggleButton.baml
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\MainWindow.baml
-C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\Views\HistoricoOs .baml
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\Views\Historico.baml
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\Views\Caixinhas\Cadastrado.baml
 C:\Users\ManutencaoEtec\Documents\GitHub\TCC\TCC_Programa\TCC_Hidracom\obj\Debug\Views\NovaTela.baml

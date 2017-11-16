@@ -20,5 +20,7 @@ namespace TCC_Hidracom
         /// {2} = Tipo da pessoa
         /// </summary>
         public const string SELECT_TCC_PESSOAS_PAGINACAO = ";WITH Results_CTE AS ( SELECT *, ROW_NUMBER() OVER (ORDER BY id_pessoa) AS RowNum FROM tcc_pessoas WHERE tipo = {2}) SELECT * FROM Results_CTE WHERE RowNum >= {0} * {1} AND RowNum < ({0} * {1}) + {1};";
+
+        public const string SELECT_TCC_SERVICOS_PAGINACAO = ";WITH Results_CTE AS ( SELECT *, ROW_NUMBER() OVER (ORDER BY id_servicos) AS RowNum FROM tcc_historico_servicos) SELECT * FROM Results_CTE WHERE RowNum >= {0} * {1} AND RowNum < ({0} * {1}) + {1};";
     }
 }

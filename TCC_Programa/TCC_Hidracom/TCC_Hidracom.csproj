@@ -216,9 +216,6 @@
     <Compile Include="Views\Historico_Servico.Designer.cs">
       <DependentUpon>Historico_Servico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\HistoricoOs .xaml.cs">
-      <DependentUpon>HistoricoOs .xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\PsqCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,10 +307,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\HistoricoOs .xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Views\Historico.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

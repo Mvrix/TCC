@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MetroFramework;
 using MetroFramework.Forms;
 using System.Data.SqlClient;
+using System.Windows;
 
 namespace TCC_Hidracom.Views
 {
@@ -101,6 +102,12 @@ namespace TCC_Hidracom.Views
                 pagina--;
                 GerarPaginacao();
             }
+        }
+
+        private void VoltarBtn_Click(object sender, EventArgs e)
+        {
+            System.Windows.Application.Current.MainWindow.Visibility = Visibility.Visible;
+            Close();
         }
     }
 }

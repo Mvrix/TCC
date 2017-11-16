@@ -9,8 +9,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using Hardcodet.Wpf.TaskbarNotification;
 using MaterialDesignThemes.Wpf;
 using MaterialDesignThemes.Wpf.Transitions;
+using RadialMenu.Controls;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -22,6 +24,7 @@ using System.Windows.Documents;
 using System.Windows.Forms.Integration;
 using System.Windows.Ink;
 using System.Windows.Input;
+using System.Windows.Interactivity;
 using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
